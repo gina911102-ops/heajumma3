@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>何 阿珠媽的逆襲</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6ebe3;--card:#fffaf6;--ink:#3a1c1a;--mute:#7a5a52;--line:#ebd2c6;--acc:#b02a22;--accsoft:#f9ddd5;--warn:#8a5200;--warnsoft:#fdecc9;--hd:#a82a20;--amber:#e08a1e;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241515;--card:#311d1c;--ink:#f7e8df;--mute:#c7a99d;--line:#4a2d2a;--acc:#ff7b61;--accsoft:#4a2622;--warn:#f0b868;--warnsoft:#3a2b14;--hd:#7d1f19;--amber:#f0a24a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#241515;--card:#311d1c;--ink:#f7e8df;--mute:#c7a99d;--line:#4a2d2a;--acc:#ff7b61;--accsoft:#4a2622;--warn:#f0b868;--warnsoft:#3a2b14;--hd:#7d1f19;--amber:#f0a24a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 "Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:10}
+main{max-width:640px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:"Noto Serif TC",Georgia,"PMingLiU",serif;margin:0}
+header{position:relative;overflow:hidden;background:var(--hd);color:#fff;margin:0 -16px 8px;padding:30px 20px 24px;border-radius:0 0 22px 22px}
+header .dates,header .sub,header h1,.count{position:relative}
+header .dates{opacity:.85;font-size:13px}
+header h1{font-size:32px;font-weight:900;line-height:1.25;margin:6px 0;max-width:70%}
+header .sub{opacity:.9}
+.count{display:inline-block;margin-top:12px;background:rgba(255,255,255,.2);color:#fff;padding:3px 12px;border-radius:99px;font-size:13px;font-weight:500}
+.lf{position:absolute;fill:currentColor}
+.l1{right:12px;top:10px;width:84px;height:84px;color:#f2a33a;transform:rotate(18deg)}.l2{right:92px;top:58px;width:44px;height:44px;color:#e0612f;transform:rotate(-24deg)}.l3{right:30px;bottom:6px;width:36px;height:36px;color:#ffd08a;transform:rotate(40deg)}.l4{right:120px;top:12px;width:26px;height:26px;color:#f7c15f;transform:rotate(-8deg)}
+ul.plain li{flex-wrap:wrap}
+.hrs{font-size:12px;color:var(--mute);margin-top:2px;font-weight:400}
+section.tab{display:none}section.tab.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.card h3{font-size:17px;margin-bottom:8px}
+.days{display:flex;gap:8px;overflow-x:auto;padding:6px 0 4px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+.days button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:6px 12px;font:inherit;font-size:13px;text-align:center;line-height:1.3;cursor:pointer}
+.days button b{display:block;font-size:15px}
+.days button.on{background:var(--acc);border-color:var(--acc);color:var(--bg)}
+.dayhead h2{font-size:24px;margin:14px 0 2px}.dayhead p{margin:0;color:var(--mute);font-size:13px}
+ol.tl{list-style:none;margin:10px 0 0;padding:0 0 0 18px;border-left:2px solid var(--line)}
+ol.tl li{position:relative;padding:2px 0 14px 14px}
+ol.tl li::before{content:"";position:absolute;left:-27px;top:6px;width:16px;height:16px;background:var(--amber);clip-path:polygon(50% 4%,57% 19%,65% 13%,65% 33%,80% 27%,76% 45%,96% 43%,84% 59%,91% 72%,63% 69%,54% 78%,53% 98%,47% 98%,46% 78%,37% 69%,9% 72%,16% 59%,4% 43%,24% 45%,20% 27%,35% 33%,35% 13%,43% 19%)}
+ol.tl li.food::before{background:var(--acc)}
+ol.tl .t{font-size:12px;color:var(--mute)}
+ol.tl .n{font-weight:500}
+ol.tl .d{font-size:13px;color:var(--mute)}
+.tag{display:inline-block;font-size:12px;padding:0 8px;border-radius:99px;background:var(--accsoft);color:var(--acc);margin-right:4px}
+.tag.w{background:var(--warnsoft);color:var(--warn)}
+a{color:var(--acc)}
+.go{display:inline-block;margin-left:8px;font-size:12px;padding:1px 10px;border-radius:99px;background:var(--accsoft);color:var(--acc);text-decoration:none;font-weight:500;white-space:nowrap}
+.note{background:var(--warnsoft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:13px;margin:10px 0}
+.flight{display:grid;grid-template-columns:auto 1fr 1fr;gap:2px 12px;font-size:14px}
+.flight .k{color:var(--mute);font-size:12px}
+label.f{display:block;font-size:12px;color:var(--mute);margin-top:8px}
+input[type=text],input[type=number]{width:100%;font:inherit;font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.btn{border:0;background:var(--acc);color:var(--bg);font:inherit;font-weight:500;border-radius:10px;padding:8px 14px;cursor:pointer;flex:0 0 auto}
+.btn.ghost{background:transparent;color:var(--mute);border:1px solid var(--line)}
+.res{font-family:"Noto Serif TC",serif;font-size:30px;font-weight:900;margin:8px 0 0}
+.res small{font-size:13px;font-family:"Noto Sans TC",sans-serif;font-weight:400;color:var(--mute);display:block}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border:0}
+ul.plain li span.g{flex:1}
+ul.plain li.done span.g{text-decoration:line-through;color:var(--mute)}
+ul.plain input[type=checkbox]{width:20px;height:20px;accent-color:var(--acc)}
+.x{background:none;border:0;color:var(--mute);font-size:18px;cursor:pointer;padding:0 6px}
+.big{font-size:28px;font-weight:700;font-family:"Noto Serif TC",serif}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));z-index:20}
+nav button{flex:1;border:0;background:none;color:var(--mute);font:inherit;font-size:12px;padding:4px 0;cursor:pointer}
+nav button span{display:block;font-size:20px;line-height:1.2}
+nav button.on{color:var(--acc);font-weight:700}
+@media (prefers-reduced-motion:no-preference){section.tab.on{animation:in .2s ease-out}@keyframes in{from{opacity:.4}to{opacity:1}}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mp" viewBox="0 0 100 100"><polygon points="50,4 57,19 65,13 65,33 80,27 76,45 96,43 84,59 91,72 63,69 54,78 53,98 47,98 46,78 37,69 9,72 16,59 4,43 24,45 20,27 35,33 35,13 43,19"/></symbol></svg>
+<main>
+<header>
+<svg class="lf l1" viewBox="0 0 100 100" aria-hidden="true"><use href="#mp"/></svg><svg class="lf l2" viewBox="0 0 100 100" aria-hidden="true"><use href="#mp"/></svg><svg class="lf l3" viewBox="0 0 100 100" aria-hidden="true"><use href="#mp"/></svg><svg class="lf l4" viewBox="0 0 100 100" aria-hidden="true"><use href="#mp"/></svg>
+  <div class="dates">2026.11.18（三）至 11.23（一）</div>
+  <h1>何 阿珠媽的逆襲</h1>
+  <div class="sub">首爾 6 天 5 夜　弘大・明洞・聖水洞・蠶室</div>
+  <div class="count" id="count"></div>
+</header>
+
+<section class="tab on" id="t-plan">
+  <div class="days" id="days"></div>
+  <div id="day"></div>
+  <div class="card"><h3>航班</h3>
+    <div class="flight">
+      <div class="k">去程 11/18</div><div><div class="k">KE2032 起飛</div>17:50</div><div><div class="k">抵達仁川 T2</div>21:35</div>
+      <div class="k">回程 11/23</div><div><div class="k">KE2031 起飛</div>14:15</div><div><div class="k">抵達</div>16:25</div>
+    </div>
+    <div class="note">回程建議 11:30 前抵達機場，飯店最晚 9:30 出發。</div>
+  </div>
+  <div class="card"><h3>住宿</h3>
+    <div class="d" style="color:var(--mute);font-size:13px">名稱和地址會存在這支手機的瀏覽器裡。</div>
+    <b>住宿 1（11/18 至 11/20，2 晚）</b>
+    <label class="f">名稱</label><input type="text" data-save="h1n">
+    <label class="f">地址</label><input type="text" data-save="h1a">
+    <div class="d" style="font-size:13px;color:var(--mute);margin-top:4px">入住 15:00 起，退房 12:00 前</div>
+    <hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
+    <b>住宿 2（11/20 至 11/23，3 晚）</b>
+    <label class="f">名稱</label><input type="text" data-save="h2n">
+    <label class="f">地址</label><input type="text" data-save="h2a">
+    <div class="d" style="font-size:13px;color:var(--mute);margin-top:4px">入住 15:00 起，退房 11:00 前</div>
+  </div>
+</section>
+
+<section class="tab" id="t-money">
+  <div class="card"><h3>韓元換台幣</h3>
+    <label class="f">匯率：1 韓元 = 台幣</label>
+    <input type="number" id="rate" step="0.0001" value="0.022">
+    <div class="d" style="font-size:12px;color:var(--mute)">這是預設的概略匯率，請改成你當天的實際匯率。</div>
+    <div style="margin-top:8px"><a class="go" style="margin:0 8px 0 0" target="_blank" rel="noopener" href="https://www.google.com/finance/quote/KRW-TWD">查即時匯率</a><a class="go" style="margin:0" target="_blank" rel="noopener" href="https://rate.bot.com.tw/xrt?Lang=zh-TW">台灣銀行牌告</a></div>
+    <label class="f">韓元金額或算式，例如 12000+8500</label>
+    <input type="text" id="expr" inputmode="decimal" placeholder="0">
+    <div class="res" id="out">NT$ 0<small id="outk">₩ 0</small></div>
+  </div>
+  <div class="card"><h3>花費記錄</h3>
+    <div class="row"><input type="text" id="en" placeholder="項目"><input type="number" id="ek" placeholder="韓元" inputmode="numeric"><button class="btn" id="eadd">新增</button></div>
+    <ul class="plain" id="elist"></ul>
+    <div class="res" id="etotal"></div>
+  </div>
+</section>
+
+<section class="tab" id="t-food">
+  <div class="card"><h3>想吃清單</h3>
+    <div style="color:var(--mute);font-size:13px">每間店都有 Google 和 Naver 兩個導航按鈕。吃過的打勾。</div>
+    <ul class="plain" id="foods"></ul>
+  </div>
+  <div class="card"><h3>炸雞宵夜：離住宿最近的店</h3>
+    <div style="color:var(--mute);font-size:13px">距離是從住宿算的直線距離，營業時間請在地圖上確認。</div>
+    <div id="chk"></div>
+  </div>
+  <div class="card"><h3>飲料專區</h3>
+    <div style="color:var(--mute);font-size:13px">選一個行程會經過的區域，會搜尋該區的分店。</div>
+    <div class="days" id="dpills" style="position:static;background:transparent"></div>
+    <ul class="plain" id="dlist"></ul>
+  </div>
+</section>
+
+<section class="tab" id="t-shop"><div id="shop"></div></section>
+
+<section class="tab" id="t-list">
+  <div class="card"><h3>行前清單</h3>
+    <ul class="plain" id="checks"></ul>
+    <div class="row" style="margin-top:10px"><input type="text" id="cn" placeholder="新增項目"><button class="btn" id="cadd">新增</button></div>
+  </div>
+  <div class="card"><h3>個人備忘錄</h3>
+    <textarea id="memo" rows="5" style="width:100%;font:inherit;font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)"></textarea>
+  </div>
+</section>
+
+<section class="tab" id="t-info">
+  <div class="card"><h3>入境手續</h3>
+    <p style="margin:0 0 6px"><b>電子入境卡</b>：出發前 3 天可開始填，有辦 SeS 自動通關則免填。<br><a href="https://www.e-arrivalcard.go.kr/portal/main/index.do" target="_blank" rel="noopener">e-Arrival Card 官網</a></p>
+    <p style="margin:0"><b>K-ETA</b>：台灣旅客暫免申請至 2026 年底。若需要申請，費用每人 10,300 韓元，要在出發前 3 天辦好。出發前請到官網再確認一次。<br><a href="https://www.k-eta.go.kr/portal/newapply/index.do" target="_blank" rel="noopener">K-ETA 官網</a></p>
+  </div>
+  <div class="card"><h3>天氣</h3>
+    <a href="https://www.weather.go.kr/w/index.do" target="_blank" rel="noopener">韓國氣象廳</a>　<a href="https://weather.naver.com/" target="_blank" rel="noopener">Naver 天氣</a>
+    <div class="d" style="color:var(--mute);font-size:13px">11 月下旬的首爾接近 0 到 10 度，早晚更冷，穿制服拍照請備暖暖包。</div>
+  </div>
+  <div class="card"><h3>緊急聯絡</h3>
+    <div class="row"><div><div class="big">112</div>警察</div><div><div class="big">119</div>消防、救護</div><div><div class="big">1330</div>旅遊諮詢</div></div>
+    <label class="f">駐韓代表部聯絡電話（請自行查官網填入）</label><input type="text" data-save="emg">
+  </div>
+  <div class="card"><h3>注意事項</h3>
+    <ul style="margin:0;padding-left:18px">
+      <li>肉類和肉製品（含泡麵調理包、香腸零食）不可攜入韓國。</li>
+      <li>手提行李的液體每瓶 100ml 以下，裝入透明夾鏈袋。</li>
+      <li>行動電源和鋰電池要放在隨身行李。</li>
+      <li>韓國電壓 220V，台灣的插頭要帶轉接頭。</li>
+      <li>營業時間請點各店的 Naver 按鈕，在店家頁面查看，以現場 Naver 顯示為準。</li>
+      <li>手扶梯靠右站，和關西相反。</li>
+      <li>街上垃圾桶很少，垃圾帶回住處。</li>
+      <li>「Google」鈕會開 Google Maps 的大眾運輸路線。韓國的步行導航常不準，覺得怪就點「Naver」鈕，Naver Map 會搜尋該地點。</li>
+      <li>進賭場（七星）要帶護照，先決定好預算上限。</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<nav id="nav">
+  <button data-t="plan" class="on"><span>🗓</span>行程</button>
+  <button data-t="money"><span>₩</span>匯率</button>
+  <button data-t="food"><span>🍲</span>美食</button>
+  <button data-t="shop"><span>🛍</span>購物</button>
+  <button data-t="list"><span>✅</span>清單</button>
+  <button data-t="info"><span>ℹ️</span>資訊</button>
+</nav>
+
+<script>
+var DAYS=[
+{d:"11/18",w:"三",title:"抵達首爾",area:"仁川機場、弘大",items:[
+ {t:"17:50",n:"KE2032 起飛",d:"手提行李的液體和電池要符合規定"},
+ {t:"21:35",n:"抵達仁川機場 2 號航廈",d:"入境審查、領行李"},
+ {n:"搭計程車前往住宿",d:"深夜到達，直接搭計程車比較省事"},
+ {n:"宵夜：BHC 炸雞、橋村炸雞",food:1}]},
+{d:"11/19",w:"四",title:"明洞、南大門",area:"明洞、南大門",items:[
+ {n:"早餐",d:"還沒決定",food:1},
+ {n:"午餐：Mr. 西王水餃 梨大店",food:1},
+ {n:"明洞、南大門逛街"},
+ {n:"晚餐：禹傑說的那間",d:"請補上店名",food:1,warn:1}]},
+{d:"11/20",w:"五",title:"換住宿、聖水洞",area:"聖水洞、弘大",items:[
+ {n:"住宿 1 退房（12:00 前）",d:"行李可以先寄放"},
+ {n:"午餐：祖傳三代馬鈴薯排骨湯",food:1},
+ {n:"聖水洞逛街"},
+ {n:"住宿 2 入住（15:00 起）"},
+ {n:"晚餐：사위식당 성수",d:"章魚、大腸、蝦子",food:1},
+ {n:"宵夜：BHC 炸雞、橋村炸雞",d:"和第一天重複，要換一家嗎",food:1,warn:1}]},
+{d:"11/21",w:"六",title:"景福宮、南山",area:"景福宮、廣藏、東大門、南山",items:[
+ {n:"早餐：土俗村 蔘雞湯",d:"10:00 才開門，常排隊，建議開門前後到",warn:1,food:1},
+ {n:"景福宮"},
+ {n:"午餐：廣藏市場",food:1},
+ {n:"東大門",d:"這天行程很滿，時間不夠可以先捨棄這裡",warn:1},
+ {n:"南山纜車、首爾塔",d:"天黑得早，建議傍晚上去看夜景"},
+ {n:"晚餐：Mokmyeoksan Horaengi",d:"Google 顯示 19:30 打烊，建議提早到",warn:1,food:1},
+ {n:"明洞逛街",d:"晚餐後再去逛"},
+ {n:"宵夜：布帳馬車",d:"隨意逛逛",food:1}]},
+{d:"11/22",w:"日",title:"樂天世界、蠶室",area:"蠶室、三成",items:[
+ {n:"住宿步行到數位媒體城站"},
+ {n:"地鐵：數位媒體城站、新堂站、蠶室站"},
+ {n:"午餐：Bon Di BBQ",food:1},
+ {t:"11:00 至 16:00",n:"梨花制服租賃、樂天世界",d:"樂天世界塔、樂天免稅店也在這一帶"},
+ {n:"地鐵：蠶室站到三成站"},
+ {n:"星空圖書館"},
+ {n:"晚餐：Sinsa Kkotgedang 醬蟹",food:1,d:"建議先吃飯再去賭場"},
+ {n:"七星娛樂場",d:"要帶護照，先訂好預算上限",warn:1}]},
+{d:"11/23",w:"一",title:"回程",area:"仁川機場",items:[
+ {n:"早餐、整理行李"},
+ {t:"11:00 前",n:"退房",d:"住宿 2 最晚 11:00"},
+ {t:"11:30 前",n:"抵達仁川機場 2 號航廈",d:"退稅、託運、安檢要留時間"},
+ {t:"14:15",n:"KE2031 起飛"}]}
+];
+DAYS[0]={d:'11/18',w:'三',title:'抵達首爾',area:'仁川機場、弘大',items:[
+{t:'21:35',n:'抵達仁川機場 2 號航廈',d:'已訂好｜記得買 T-money'},
+{t:'22:35',n:'搭計程車到住宿附近的 GS25',d:'已訂好'},
+{t:'23:35',n:'GS25 步行到住宿',d:'約 5 分鐘'},
+{t:'23:40',n:'住宿 1 入住'},
+{t:'00:00',n:'宵夜：BHC 炸雞、橋村炸雞、弘大部隊鍋',food:1}]};
+DAYS[1]={d:'11/19',w:'四',title:'明洞、南大門、梨大、弘大',area:'明洞、南大門、梨花女子大學、弘大',items:[
+{t:'08:30',n:'起床'},
+{t:'09:00',n:'步行到望遠站',d:'約 10 分鐘'},
+{t:'09:10',n:'地鐵到明洞站：望遠(621) → 三角地(628) → 明洞(424)',d:'約 50 分鐘'},
+{t:'10:00',n:'早餐：Isaac Toast 明洞店',d:'5 號出口，約 30 分鐘，不想吃可以跳過',food:1},
+{t:'10:30',n:'大使館換錢所',d:'約 15 分鐘'},
+{t:'10:45 至 12:30',n:'新世界百貨免稅',d:'明洞、南大門一帶逛街'},
+{n:'樂天百貨免稅'},
+{n:'其他逛街'},
+{t:'12:30',n:'午餐：명동명한우（明洞明韓牛）',d:'約 90 分鐘',food:1},
+{t:'14:00 至 18:00',n:'繼續逛：南大門或其他'},
+{t:'18:00',n:'地鐵到梨花女子大學站：乙支路入口(202) → 梨花女大(241)',d:'約 10 分鐘，1 號出口'},
+{t:'18:30',n:'晚餐：Mr. 西王水餃 梨大店',d:'約 90 分鐘',food:1},
+{t:'20:00',n:'地鐵到弘益大學站：梨花女大(241) → 弘益大學(239)',d:'1 號出口'},
+{t:'20:00 至 22:00',n:'T1 Base Camp',d:'約 2 小時'},
+{t:'22:00',n:'地鐵回住宿 1：弘益大學(239) → 合井(238) → 望遠(621)',d:'再步行回住宿，約 10 分鐘'}]};
+DAYS[2]={d:'11/20',w:'五',title:'聖水洞、換住宿、弘大',area:'聖水洞、數位媒體城、弘大',items:[
+{t:'08:30',n:'起床'},
+{t:'09:00',n:'寄放行李',d:'預約 9:30'},
+{t:'09:15',n:'早餐：Brick Bagel',d:'Google 顯示週五 12:00 才開，09:15 去會撲空，請用 Naver 確認或改時間',warn:1,food:1},
+{t:'10:00',n:'地鐵到聖水站：望遠(621) → 合井(622) → 聖水(211)',d:'約 45 分鐘，3 號出口'},
+{t:'10:45 至 12:30',n:'OLIVE YOUNG N 聖水',d:'聖水洞逛街'},
+{n:'Musinsa Store Seongsu Federation'},
+{n:'建大貨櫃屋'},
+{n:'首爾林'},
+{n:'逛逛：買自然島鹽可頌'},
+{t:'12:30',n:'午餐：祖傳三代馬鈴薯排骨湯',d:'約 90 分鐘',food:1},
+{t:'14:00 至 15:00',n:'散步'},
+{t:'15:00',n:'地鐵回望遠：聖水(211) → 合井(238) → 望遠(621)',d:'約 45 分鐘，8 號出口'},
+{t:'16:00',n:'領取行李',d:'預約 16:00'},
+{t:'16:20',n:'地鐵到數位媒體城站：望遠(621) → 數位媒體城(618)',d:'約 10 分鐘'},
+{t:'16:30',n:'步行到住宿 2 並入住',d:'約 10 分鐘，16:40 入住'},
+{t:'17:00',n:'地鐵到弘益大學站：數位媒體城(618) → 弘益大學(239)',d:'約 15 分鐘，9 號出口'},
+{t:'17:15',n:'晚餐：翁多來燉雞',d:'約 90 分鐘',food:1},
+{t:'18:45 至 22:00',n:'弘大逛街'},
+{n:'宵夜：BHC 炸雞、橋村炸雞',food:1}]};
+DAYS[2]={d:'11/20',w:'五',title:'聖水洞、換住宿、弘大',area:'望遠、聖水洞、數位媒體城、弘大',items:[
+{t:'07:30',n:'起床'},
+{t:'08:40',n:'早餐：604 seoul',d:'約 60 分鐘',food:1},
+{t:'10:15',n:'步行到麻浦區廳站：望遠(621) → 麻浦區廳(620)'},
+{t:'10:30',n:'寄放行李：BLUEPEPPER Eyewear Mangwon',d:'預約 10:30，約 15 分鐘'},
+{t:'10:45',n:'計程車到 OLIVE YOUNG N 聖水',d:'約 30 分鐘'},
+{t:'11:45 至 17:00',n:'OLIVE YOUNG N 聖水、Stand Oil、Matin Kim、emis',d:'聖水洞逛街'},
+{n:'Musinsa Store 與大林倉庫'},
+{n:'午餐：祖傳三代馬鈴薯排骨湯',food:1},
+{n:'首爾林、逛逛：買自然島鹽可頌'},
+{t:'17:00',n:'計程車回 BLUEPEPPER Eyewear Mangwon',d:'約 30 分鐘'},
+{t:'17:30',n:'領取行李：BLUEPEPPER Eyewear Mangwon',d:'約 15 分鐘，步行'},
+{t:'17:50',n:'地鐵到數位媒體城站：麻浦區廳(620) → 數位媒體城(618)',d:'約 10 分鐘'},
+{t:'18:00',n:'步行到住宿 2',d:'約 10 分鐘'},
+{t:'18:10',n:'住宿 2 入住',d:'約 20 分鐘'},
+{t:'18:30',n:'地鐵到弘益大學站：數位媒體城(618) → 弘益大學(239)',d:'約 15 分鐘，地鐵加步行'},
+{t:'18:45',n:'晚餐：翁多來燉雞',d:'約 90 分鐘',food:1},
+{t:'22:00 前',n:'弘大逛街'},
+{n:'宵夜：BHC 炸雞、橋村炸雞',food:1}]};
+var FOODS=[['Isaac Toast 明洞店',2],['명동명한우（明洞明韓牛）',2],['Mr. 西王水餃 梨大店',2],['604 seoul',3],['祖傳三代馬鈴薯排骨湯',3],['翁多來燉雞',3],['弘大部隊鍋',1],['土俗村 蔘雞湯',4],['廣藏市場',4],['Mokmyeoksan Horaengi',4],['布帳馬車',4],['Bon Di BBQ',5],['Sinsa Kkotgedang 醬蟹',5],['BHC 炸雞',1],['橋村炸雞',1],['두툼（中林路 10 號 1 樓）','想吃'],['Jopok 炒年糕 弘大2號店','想吃']];
+var FOODS_OLD=[["Mr. 西王水餃 梨大店",2],["祖傳三代馬鈴薯排骨湯",3],["사위식당 성수",3],["土俗村 蔘雞湯",4],["廣藏市場",4],["Mokmyeoksan Horaengi",4],["布帳馬車",4],["Bon Di BBQ",5],["Sinsa Kkotgedang 醬蟹",5],["BHC 炸雞",1],["橋村炸雞",1]];
+var CHECKS=["護照","電子入境卡（出發前 3 天可填）","確認 K-ETA 規定","網卡或 eSIM","交通卡（T-money）","韓元現金、信用卡","行動電源（放隨身）","轉接插頭（220V）","保暖衣物、暖暖包","下載 Naver Map、Kakao Map","住宿名稱和地址存在手機"];
+var $=function(s){return document.querySelector(s)};
+function lsGet(k,d){try{var v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function naver(q){return "https://map.naver.com/p/search/"+encodeURIComponent(q)}
+
+// countdown
+(function(){var s=new Date(2026,10,18),n=new Date();n.setHours(0,0,0,0);var d=Math.round((s-n)/864e5);
+$("#count").textContent=d>0?"距離出發還有 "+d+" 天":(d>=-5?"旅程進行中":"旅程結束")})();
+
+// tabs
+$("#nav").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+document.querySelectorAll("nav button").forEach(function(x){x.classList.toggle("on",x===b)});
+document.querySelectorAll("section.tab").forEach(function(x){x.classList.toggle("on",x.id==="t-"+b.dataset.t)});window.scrollTo(0,0)});
+
+// map links
+var PLACES=[["住宿 1","@h1a"],["住宿 2","@h2a"],["前往住宿","@h1a"],["仁川機場","Incheon International Airport Terminal 2"],["西王水餃","미스터서왔만두 서울 서대문구 신촌역로 16"],["明洞","Myeongdong Shopping Street"],["祖傳三代","祖傳三代馬鈴薯排骨湯 Seongsu Seoul"],["사위식당","사위식당 성수"],["聖水洞","Seongsu-dong Seoul"],["土俗村","Tosokchon Samgyetang"],["景福宮","Gyeongbokgung Palace"],["廣藏市場","Gwangjang Market"],["東大門","Dongdaemun Design Plaza"],["首爾塔","N Seoul Tower"],["Mokmyeoksan","Mokmyeoksan Horaengi Seoul"],["數位媒體城站","Digital Media City Station"],["Bon Di","Bon Di BBQ Seoul"],["樂天世界","Lotte World"],["星空圖書館","Starfield Library COEX"],["Sinsa","Sinsa Kkotgedang Ganjang Gejang"],["七星","Seven Luck Casino COEX"],["退房","@h2a"]];
+var NU={"西王水餃":"https://pcmap.place.naver.com/restaurant/36670196/home"};
+var NV={"仁川機場":"인천국제공항 제2여객터미널","明洞":"명동","聖水洞":"성수동","土俗村":"토속촌삼계탕","景福宮":"경복궁","廣藏市場":"광장시장","東大門":"동대문디자인플라자","首爾塔":"N서울타워","數位媒體城站":"디지털미디어시티역","樂天世界":"롯데월드","星空圖書館":"별마당도서관","七星":"세븐럭카지노 코엑스점","Mokmyeoksan":"목명산방 남산타워점","西王水餃":"미스터서왔만두","祖傳三代":"소문난성수감자탕","Bon Di":"본디","Sinsa":"신사꽃게당 압구정로데오점"};
+Object.assign(NV,{'弘大部隊鍋':'홍대 부대찌개','明洞站':'명동역','Isaac Toast':'이삭토스트 명동','大使館換錢所':'대사관환전소','新世界百貨免稅':'신세계면세점 명동점','樂天百貨免稅':'롯데면세점 명동본점','南大門':'남대문시장','梨花女子大學站':'이대역','弘益大學站':'홍대입구역','T1 Base Camp':'T1 베이스캠프','Brick Bagel':'브릭베이글','聖水站':'성수역','OLIVE YOUNG N':'올리브영 N성수','Seongsu Federation':'무신사 스토어 성수','建大貨櫃屋':'커먼그라운드','首爾林':'서울숲','鹽可頌':'자연도 소금빵','翁多來':'홍대 닭볶음탕','弘大逛街':'홍대 걷고싶은거리'});
+PLACES.unshift(['弘大部隊鍋','Hongdae Budae Jjigae'],['明洞站','Myeongdong Station'],['Isaac Toast','Isaac Toast Myeongdong'],['大使館換錢所','Embassy Money Exchange Myeongdong'],['新世界百貨免稅','Shinsegae Duty Free Myeongdong'],['樂天百貨免稅','Lotte Duty Free Myeongdong'],['명동명한우','명동명한우'],['南大門','Namdaemun Market'],['梨花女子大學站','Ewha Womans University Station'],['弘益大學站','Hongik University Station'],['T1 Base Camp','T1 Base Camp Hongdae'],['Brick Bagel','Brick Bagel Seoul'],['聖水站','Seongsu Station'],['OLIVE YOUNG N','Olive Young N Seongsu'],['Seongsu Federation','Musinsa Store Seongsu Federation'],['建大貨櫃屋','Common Ground Konkuk University'],['首爾林','Seoul Forest'],['鹽可頌','자연도 소금빵 성수'],['翁多來','翁多來燉雞 Hongdae Seoul'],['弘大逛街','Hongdae Shopping Street']);
+var HOURS={'Isaac Toast':'每天 07:00–20:00（週三到 19:30）','명동명한우':'週一至六 24 小時，週日 11:30–22:00','西王水餃':'每天 11:00–21:00','Brick Bagel':'週一、五至日 12:00–20:00，週二三公休','祖傳三代':'24 小時營業','土俗村':'每天 10:00–22:00','廣藏市場':'各攝不同，請看 Naver','Mokmyeoksan':'每天 10:30–19:30','Bon Di':'週一至四 12:00–14:00、17:00–22:00；週五至日 12:00–22:00','Sinsa':'週一至五 11:30–23:30，週六 11:30–23:20，週日 12:00–23:20','T1 Base Camp':'24 小時營業','OLIVE YOUNG N':'每天 10:00–22:00','樂天百貨免稅':'每天 09:30–20:00','新世界百貨免稅':'週一至四 10:30–20:00，週五至日 10:30–20:30','東大門':'DDP 每天 10:00–20:00','星空圖書館':'每天 10:30–22:00','七星':'24 小時營業，限外國人，要帶護照','景福宮':'週二公休，其他日 09:00–18:00','首爾塔':'南山纜車每天 10:00–23:00'};
+NU['두툼']='https://naver.me/5homz3Jg';NU['土俗村']='https://naver.me/FbVU1RHs';NV['Jopok']='조폭떡볶이 홍대2호점';PLACES.unshift(['두툼','두툼 서울 중구 중림로 10 1층'],['Jopok','Jopok Tteokbokki Hongdae 2nd Branch']);
+Object.assign(NV,{'604 seoul':'604 seoul','BLUEPEPPER':'BLUEPEPPER Eyewear Mangwon','Musinsa Store':'무신사 스토어 성수'});
+PLACES.unshift(['604 seoul','604 seoul Seoul'],['BLUEPEPPER','BLUEPEPPER Eyewear Mangwon'],['Musinsa Store','Musinsa Store Seongsu']);
+function navLink(n){for(var i=0;i<PLACES.length;i++){if(n.indexOf(PLACES[i][0])>-1){var q=PLACES[i][1];if(q.charAt(0)==="@"){var el=document.querySelector('[data-save="'+q.slice(1)+'"]');q=el?el.value:""}if(!q)return "";var nq=NV[PLACES[i][0]]||q;return '<a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;destination='+encodeURIComponent(q)+'">📍Google</a><a class="go" target="_blank" rel="noopener" href="'+(NU[PLACES[i][0]]||'https://map.naver.com/p/search/'+encodeURIComponent(nq))+'">🟢Naver</a>'+(HOURS[PLACES[i][0]]?'<div class="hrs">🕒 '+esc(HOURS[PLACES[i][0]])+'</div>':'')}}return ""}
+
+function qOf(n){for(var i=0;i<PLACES.length;i++){if(n.indexOf(PLACES[i][0])>-1){var q=PLACES[i][1];if(q.charAt(0)==="@"){var el=document.querySelector('[data-save="'+q.slice(1)+'"]');q=el?el.value:""}return q}}return ""}
+function iconOf(it){var n=it.n;if(/住宿/.test(n))return "🏨";if(/機場/.test(n))return "✈️";if(it.food)return "🍽";if(/逛|百貨|免稅|OLIVE|Musinsa|市場|DDP|東大門|仁寺|購物/.test(n))return "🛍";if(/站/.test(n))return "🚇";return "📍"}
+function routeMap(x){
+ var st=x.items.filter(function(it){return !/^地鐵/.test(it.n)&&qOf(it.n)});
+ if(st.length<2)return "";
+ var H=st.length*76+40,pts=st.map(function(s,i){return{x:i%2?270:90,y:44+i*76}}),d="M"+pts[0].x+" "+pts[0].y;
+ for(var i=1;i<pts.length;i++){d+=" C"+pts[i-1].x+" "+(pts[i-1].y+42)+","+pts[i].x+" "+(pts[i].y-42)+","+pts[i].x+" "+pts[i].y}
+ var g=st.map(function(s,i){var p=pts[i],L=p.x<180,lab=s.n.replace(/^(早餐|午餐|晚餐|宵夜)：/,"").replace(/（.*?）/g,"");if(lab.length>9)lab=lab.slice(0,9)+"…";var tx=L?p.x+28:p.x-28,an=L?"start":"end";
+  return '<circle cx="'+p.x+'" cy="'+p.y+'" r="19" style="fill:var(--card);stroke:var(--acc)" stroke-width="3"/><text x="'+p.x+'" y="'+(p.y+1)+'" text-anchor="middle" dominant-baseline="central" font-size="18">'+iconOf(s)+'</text><text x="'+tx+'" y="'+(p.y-2)+'" text-anchor="'+an+'" font-size="13" font-weight="700" style="fill:var(--ink)">'+esc(lab)+'</text><text x="'+tx+'" y="'+(p.y+14)+'" text-anchor="'+an+'" font-size="11" style="fill:var(--mute)">'+esc((s.t||"").replace(" 至 ","–"))+'</text>'}).join("");
+ var qs=st.map(function(s){return qOf(s.n)}),way=qs.slice(1,-1).slice(0,8).map(encodeURIComponent).join("%7C");
+ var url="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin="+encodeURIComponent(qs[0])+"&amp;destination="+encodeURIComponent(qs[qs.length-1])+(way?"&amp;waypoints="+way:"");
+ return '<div class="card"><h3>今日路線小地圖</h3><svg viewBox="0 0 360 '+H+'" width="100%" role="img" aria-label="今日路線小地圖" style="display:block;border-radius:12px;background:var(--accsoft)"><use href="#mp" x="300" y="6" width="40" height="40" style="fill:var(--amber);opacity:.5"/><use href="#mp" x="14" y="'+(H-50)+'" width="34" height="34" style="fill:var(--acc);opacity:.35"/><path d="'+d+'" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 11" style="stroke:var(--amber)"/>'+g+'</svg><div style="color:var(--mute);font-size:12px;margin:8px 0">依行程順序排列的示意圖，不代表實際距離。</div><a class="go" style="margin:0" target="_blank" rel="noopener" href="'+url+'">📍在 Google 地圖看今日路線</a></div>'}
+
+function P(a,o){return[(o-126.87)*2800+20,(37.595-a)*3400+20]}
+var GS={air:[37.545,126.872,'✈️','仁川機場','Incheon International Airport Terminal 2'],h1:[37.5543,126.9098,'🏨','住宿 1','@住宿 1'],h2:[37.5779,126.8941,'🏨','住宿 2','@住宿 2'],hd:[37.5567,126.9237,'🛍','弘大','Hongdae Shopping Street'],ms:[37.5636,126.9869,'🛍','明洞・南大門','Myeongdong Shopping Street'],ew:[37.558,126.9432,'🥟','梨大','Ewha Womans University Station'],ss:[37.5441,127.0546,'💄','聖水洞','Olive Young N Seongsu'],sf:[37.5444,127.0374,'🌳','首爾林','Seoul Forest'],gb:[37.5796,126.977,'🏯','景福宮','Gyeongbokgung Palace'],gj:[37.57,126.9996,'🍢','廣藏市場','Gwangjang Market','u'],dd:[37.5665,127.0092,'🏛','東大門','Dongdaemun Design Plaza'],ns:[37.5512,126.9882,'🗼','南山塔','N Seoul Tower'],jl:[37.5111,127.098,'🎡','樂天世界','Lotte World'],cx:[37.5102,127.06,'📚','COEX','Starfield Library COEX'],sn:[37.5237,127.0371,'🦀','醬蟹','Sinsa Kkotgedang Apgujeong Rodeo Ganjang Gejang']};
+var GR=[['air','h1','hd'],['h1','ms','ew','hd','h1'],['h1','ss','sf','h1','h2','hd'],['h2','gb','gj','dd','ns','ms','h2'],['h2','jl','cx','sn','cx','h2'],['h2','air']];
+var HT=`<rect x="-11" y="-26" width="22" height="26" fill="#7da6d6" stroke="#4b73a6"/><path d="M-7 -22h4v4h-4zM3 -22h4v4h-4zM-7 -14h4v4h-4zM3 -14h4v4h-4z" fill="#fff"/><rect x="-3" y="-8" width="6" height="8" fill="#4b73a6"/>`;
+var BO={gb:[-38,4],ms:[-40,14],ns:[40,22],gj:[0,-37],dd:[30,-6],hd:[30,-8],h1:[-30,-4],h2:[32,8],ss:[32,-6],cx:[-32,-4],jl:[-32,-4]};
+var BD={
+gb:`<rect x="-16" y="-8" width="32" height="8" fill="#b8b2a6"/><rect x="-13" y="-20" width="26" height="12" fill="#c8412f"/><path d="M-9 -19v11M-1.5 -19v11M6 -19v11" stroke="#e9b04a" stroke-width="3"/><path d="M-20 -19Q0 -33 20 -19L14 -17Q0 -26 -14 -17Z" fill="#3f6b8a"/><path d="M-12 -27Q0 -40 12 -27L8 -25Q0 -32 -8 -25Z" fill="#3f6b8a"/>`,
+ms:`<rect x="-11" y="-24" width="22" height="24" fill="#b5654a"/><polygon points="-11,-24 -6,-44 -1,-24" fill="#8c4a37"/><polygon points="1,-24 6,-44 11,-24" fill="#8c4a37"/><rect x="-4" y="-14" width="8" height="14" rx="4" fill="#6b3a2c"/><rect x="-8" y="-20" width="3" height="5" fill="#f3d9a0"/><rect x="5" y="-20" width="3" height="5" fill="#f3d9a0"/>`,
+ns:`<path d="M-5 0L-1.5 -10H1.5L5 0Z" fill="#c9d1d9"/><rect x="-1.5" y="-30" width="3" height="22" fill="#d8dde3" stroke="#9aa6b2" stroke-width=".6"/><ellipse cx="0" cy="-32" rx="8" ry="4" fill="#f0f3f6" stroke="#9aa6b2" stroke-width=".8"/><rect x="-.6" y="-48" width="1.2" height="14" fill="#e0612f"/>`,
+gj:`<rect x="-14" y="-6" width="28" height="6" fill="#f3d9a0"/><path d="M-16 -6L-12 -14H12L16 -6Z" fill="#e0612f"/><path d="M-8 -14L-4 -6M0 -14V-6M8 -14L4 -6" stroke="#fff" stroke-width="2"/>`,
+dd:`<path d="M-22 0Q-24 -14 -6 -15Q4 -22 18 -14Q26 -8 22 0Z" fill="#d6dee8" stroke="#8fa3b8" stroke-width="1.2"/><path d="M-14 -4Q0 -12 14 -4" fill="none" stroke="#8fa3b8"/>`,
+hd:`<rect x="-13" y="-22" width="26" height="22" fill="#e5473a"/><rect x="-13" y="-22" width="26" height="5" fill="#2b2b2b"/><text x="0" y="-5" text-anchor="middle" font-size="11" font-weight="900" fill="#fff">T1</text>`,
+h1:HT,h2:HT,
+ss:`<rect x="-18" y="-10" width="16" height="10" fill="#4c9ed9"/><rect x="0" y="-10" width="16" height="10" fill="#f2a33a"/><rect x="-9" y="-20" width="16" height="10" fill="#6cc08b"/>`,
+cx:`<rect x="-20" y="-6" width="40" height="6" fill="#9fb4c9"/><rect x="-20" y="-24" width="40" height="18" fill="#3b5f8a"/><path d="M-16 -22V-8M-11 -22V-8M-6 -22V-8M-1 -22V-8M4 -22V-8M9 -22V-8M14 -22V-8" stroke="#f2a33a" stroke-width="3"/>`,
+jl:`<polygon points="-6,0 -4,-30 -2,-58 0,-66 2,-58 4,-30 6,0" fill="#c9d6e2" stroke="#8fa3b8"/><path d="M-3 -10V-52M3 -10V-52" stroke="#8fa3b8" stroke-width=".8"/>`};
+function mt(x,y,w,h,c){return `<polygon points="${[x-w,y+h,x,y,x+w,y+h].join(' ')}" fill="${c}"/><polygon points="${[x-w*.3,y+h*.3,x,y,x+w*.3,y+h*.3].join(' ')}" fill="#fff" opacity=".85"/>`}
+var ST={dmc:[37.5771,126.8999,'數位媒體城 618'],wcs:[37.5688,126.8995,''],mgo:[37.5636,126.9015,''],mw:[37.556,126.91,'望遠 621'],hj:[37.5497,126.9139,'合井 622/238'],ss6:[37.5478,126.9229,''],gh:[37.547,126.932,''],dh6:[37.5478,126.9427,''],gd:[37.5441,126.9515,''],hc:[37.5391,126.9615,''],sg3:[37.5347,126.9731,'三角地 628'],nk:[37.5345,126.986,''],it:[37.5345,126.994,''],hg:[37.54,127.0013,''],bt:[37.5441,127.0073,''],ys:[37.5545,127.0102,''],cg:[37.5599,127.0138,''],sd:[37.5655,127.0194,'新堂'],hi:[37.5568,126.9245,'弘益大學 239'],sc:[37.5551,126.9367,''],ew:[37.5568,126.9467,'梨花女大 241'],ah:[37.5573,126.956,''],cj:[37.5601,126.9641,''],cs:[37.5657,126.9777,''],eu:[37.566,126.9822,'乙支路入口 202'],e3:[37.5663,126.9922,''],e4:[37.5667,126.9977,''],dp:[37.5654,127.0079,''],sw:[37.5643,127.0293,''],ws:[37.5614,127.0378,''],hy:[37.5555,127.0437,''],tk:[37.5474,127.0473,''],sg:[37.5446,127.056,'聖水 211'],ku:[37.5403,127.0701,''],gu:[37.537,127.086,''],gb:[37.5352,127.0946,''],jn:[37.5205,127.103,''],js:[37.5133,127.1,'蠶室'],jsn:[37.5115,127.0865,''],sp:[37.511,127.0735,''],sm:[37.5088,127.0631,'三成'],sy:[37.5456,126.9726,''],st:[37.5547,126.9707,''],hh:[37.5588,126.9788,''],md:[37.5609,126.9863,'明洞 424']};
+var LN={l6:['#CD7C2F',['dmc','wcs','mgo','mw','hj','ss6','gh','dh6','gd','hc','sg3','nk','it','hg','bt','ys','cg','sd']],l2:['#00A84D',['hj','hi','sc','ew','ah','cj','cs','eu','e3','e4','dp','sd','sw','ws','hy','tk','sg','ku','gu','gb','jn','js','jsn','sp','sm']],l4:['#00A5DE',['sg3','sy','st','hh','md']],ax:['#0090D2',['dmc','hi','gd','st']]};
+var DY=[{k:1},{rides:[['l6','mw','sg3'],['l4','sg3','md'],['l2','eu','ew'],['l2','ew','hi'],['l2','hi','hj'],['l6','hj','mw']],walks:[['p:h1','s:mw'],['s:md','p:ms'],['p:ms','s:eu'],['s:ew','p:ew'],['s:hi','p:hd']]},{rides:[['l6','mw','hj'],['l2','hj','sg'],['l6','mw','dmc'],['ax','dmc','hi']],walks:[['p:h1','s:mw'],['s:sg','p:ss'],['p:ss','p:sf'],['s:dmc','p:h2'],['s:hi','p:hd']]},{k:1},{rides:[['l6','dmc','sd'],['l2','sd','js'],['l2','js','sm']],walks:[['p:h2','s:dmc'],['s:js','p:jl'],['s:sm','p:cx'],['p:cx','p:sn']]},{k:1}];
+function sl(l,a,b){var arr=LN[l][1],i=arr.indexOf(a),j=arr.indexOf(b);return i<=j?arr.slice(i,j+1):arr.slice(j,i+1).reverse()}
+function pl(ks){return ks.map(function(k,n){return (n?'L':'M')+P(ST[k][0],ST[k][1]).join(' ')}).join(' ')}
+function wp(e){var t=e.split(':');return t[0]==='p'?P(GS[t[1]][0],GS[t[1]][1]):P(ST[t[1]][0],ST[t[1]][1])}
+function fc(x,y,s){return `<g transform="translate(${x} ${y}) scale(${s})"><circle cx="-4" r="1.6" fill="#3a1c1a"/><circle cx="4" r="1.6" fill="#3a1c1a"/><ellipse cx="-7" cy="3" rx="2.3" ry="1.4" fill="#ff8fa3" opacity=".85"/><ellipse cx="7" cy="3" rx="2.3" ry="1.4" fill="#ff8fa3" opacity=".85"/><path d="M-2 3Q0 5.5 2 3" stroke="#3a1c1a" stroke-width="1" fill="none" stroke-linecap="round"/></g>`}
+var HT2=`<rect x="-11" y="-26" width="22" height="26" rx="3" fill="#8ebbe8" stroke="#5b86b8"/><path d="M-7 -22h4v4h-4zM3 -22h4v4h-4z" fill="#fff"/><rect x="-3" y="-7" width="6" height="7" rx="2" fill="#5b86b8"/>`+fc(0,-12,.7);
+Object.assign(BO,{gb:[-62,-8],ms:[-44,16],ns:[-33,36],gj:[0,-37],dd:[44,-4],hd:[40,-16],h1:[-38,2],h2:[44,22],ss:[46,-4],cx:[-44,-2],jl:[-34,-4]});
+Object.assign(BD,{
+gb:`<rect x="-17" y="-7" width="34" height="7" rx="2" fill="#cfc8bb"/><rect x="-13" y="-22" width="26" height="15" rx="2" fill="#ef6a55"/><path d="M-9 -21v13M-1.5 -21v13M6 -21v13" stroke="#ffd36b" stroke-width="2.5"/><path d="M-21 -21Q0 -36 21 -21L15 -18Q0 -28 -15 -18Z" fill="#6aa0c8"/><path d="M-12 -29Q0 -42 12 -29L8 -26Q0 -34 -8 -26Z" fill="#6aa0c8"/>`+fc(0,-14,.8),
+ms:`<rect x="-11" y="-24" width="22" height="24" rx="3" fill="#e29a7c"/><polygon points="-11,-24 -6,-44 -1,-24" fill="#c97a5c"/><polygon points="1,-24 6,-44 11,-24" fill="#c97a5c"/><rect x="-3" y="-6" width="6" height="6" rx="3" fill="#8c4a37"/>`+fc(0,-14,.8),
+ns:`<path d="M-6 0L-1.5 -10H1.5L6 0Z" fill="#c9d1d9"/><rect x="-1.5" y="-30" width="3" height="22" fill="#dde3e9" stroke="#9aa6b2" stroke-width=".6"/><ellipse cx="0" cy="-33" rx="10" ry="6" fill="#fff" stroke="#9aa6b2" stroke-width=".8"/><rect x="-.6" y="-50" width="1.2" height="12" fill="#e0612f"/><circle cx="0" cy="-51" r="1.8" fill="#e0612f"/>`+fc(0,-33,.6),
+gj:`<rect x="-14" y="-10" width="28" height="10" rx="2" fill="#ffe3a8"/><path d="M-17 -10L-13 -19H13L17 -10Z" fill="#ff7a59"/><path d="M-8 -19L-5 -10M0 -19V-10M8 -19L5 -10" stroke="#fff" stroke-width="2"/>`+fc(0,-5,.5),
+dd:`<path d="M-24 0Q-27 -16 -7 -17Q5 -25 20 -15Q29 -8 24 0Z" fill="#e3eaf3" stroke="#9fb3c8" stroke-width="1.2"/><path d="M-16 -4Q0 -13 16 -4" fill="none" stroke="#9fb3c8"/>`+fc(0,-8,.8),
+hd:`<rect x="-14" y="-24" width="28" height="24" rx="4" fill="#ff5a4d"/><rect x="-14" y="-24" width="28" height="5" rx="2" fill="#2b2b2b"/><text x="0" y="-14" text-anchor="middle" font-size="8" font-weight="900" fill="#fff">T1</text>`+fc(0,-6,.55),
+h1:HT2,h2:HT2,
+ss:`<rect x="-18" y="-10" width="16" height="10" rx="2" fill="#4c9ed9"/><rect x="0" y="-10" width="16" height="10" rx="2" fill="#f2a33a"/><rect x="-9" y="-21" width="16" height="11" rx="2" fill="#6cc08b"/>`+fc(-1,-15,.45),
+cx:`<rect x="-20" y="-24" width="40" height="24" rx="4" fill="#cfe0f2" stroke="#7a9cc2"/><rect x="-17" y="-8" width="4" height="7" fill="#ef6a55"/><rect x="-12" y="-8" width="4" height="7" fill="#ffd36b"/><rect x="-7" y="-8" width="4" height="7" fill="#6cc08b"/><rect x="3" y="-8" width="4" height="7" fill="#4c9ed9"/><rect x="8" y="-8" width="4" height="7" fill="#ef6a55"/><rect x="13" y="-8" width="4" height="7" fill="#ffd36b"/>`+fc(0,-16,.8),
+jl:`<polygon points="-8,0 -5.5,-30 -3,-58 0,-66 3,-58 5.5,-30 8,0" fill="#d6e2ee" stroke="#8fa3b8"/><path d="M-3 -34V-54M3 -34V-54" stroke="#9fb3c8" stroke-width=".8"/>`+fc(0,-18,.5)});
+GS.gb.push('u');
+function geoMap(i){
+ var r=GR[i],pt=r.map(function(k){return P(GS[k][0],GS[k][1])});
+ var rv=[[37.575,126.870],[37.562,126.884],[37.551,126.897],[37.543,126.915],[37.536,126.936],[37.524,126.958],[37.514,126.985],[37.521,127.005],[37.532,127.022],[37.538,127.040],[37.533,127.065],[37.525,127.085],[37.522,127.112]].map(function(p){return P(p[0],p[1])});
+ var rd='M'+rv[0].join(' ');for(var j=1;j<rv.length-1;j++){rd+=' Q'+rv[j].join(' ')+' '+[(rv[j][0]+rv[j+1][0])/2,(rv[j][1]+rv[j+1][1])/2].join(' ')}rd+=' L'+rv[rv.length-1].join(' ');
+ var trees=[[60,44],[140,30],[210,62],[270,108],[190,215],[120,255],[60,295],[240,255],[300,232],[395,62],[455,132],[475,232],[520,275],[600,200],[690,160],[620,110],[430,335],[330,352],[200,335],[80,185]].map(function(p,k){return `<text x="${p[0]}" y="${p[1]}" font-size="15" opacity=".85">${k%3?'🌲':'🌳'}</text>`}).join('');
+ var bds=Object.keys(BD).map(function(k){var g=GS[k],p=P(g[0],g[1]),o=BO[k];return `<g opacity="${r.indexOf(k)>=0?1:.6}" transform="translate(${p[0]+o[0]} ${p[1]+o[1]}) scale(1.3)">${BD[k]}</g>`}).join('');
+ var seg='';for(var k=1;k<pt.length;k++){var a=pt[k-1],b=pt[k],dx=b[0]-a[0],dy=b[1]-a[1],L=Math.sqrt(dx*dx+dy*dy);if(L<30)continue;var ux=dx/L,uy=dy/L,s=k%2?1:-1;seg+=`<path d="M${a[0]+ux*17} ${a[1]+uy*17} Q${(a[0]+b[0])/2-uy*16*s} ${(a[1]+b[1])/2+ux*16*s} ${b[0]-ux*19} ${b[1]-uy*19}" fill="none" stroke="#e0612f" stroke-width="3.5" stroke-dasharray="7 6" stroke-linecap="round" marker-end="url(#ar)"/>`}
+ var nums={};r.forEach(function(k,n){(nums[k]=nums[k]||[]).push(n+1)});
+ var nodes=Object.keys(nums).map(function(k){var g=GS[k],p=P(g[0],g[1]),t=nums[k].join('·'),w=t.length*6+10,ly=g[5]==='u'?p[1]-22:p[1]+30;
+  return `<circle cx="${p[0]}" cy="${p[1]}" r="14" fill="#fff" stroke="#b02a22" stroke-width="3"/><text x="${p[0]}" y="${p[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="15">${g[2]}</text><rect x="${p[0]+8}" y="${p[1]-26}" width="${w}" height="14" rx="7" fill="#b02a22"/><text x="${p[0]+8+w/2}" y="${p[1]-19}" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="700" fill="#fff">${t}</text><text x="${p[0]}" y="${ly}" text-anchor="middle" font-size="12" font-weight="700" fill="#3a1c1a" stroke="#fff" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">${g[3]}</text>`}).join('');
+ var qs=r.map(function(k){var q=GS[k][4];return q.charAt(0)==='@'?qOf(q.slice(1)):q}).filter(Boolean),way=qs.slice(1,-1).slice(0,8).map(encodeURIComponent).join('%7C');
+ var url='https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin='+encodeURIComponent(qs[0]||'')+'&amp;destination='+encodeURIComponent(qs[qs.length-1]||'')+(way?'&amp;waypoints='+way:'');
+ var dy=DY[i]||{},rides=dy.rides||[];
+ var rbg=Object.keys(LN).map(function(l){return `<path d="${pl(LN[l][1])}" fill="none" stroke="${LN[l][0]}" stroke-width="4" opacity=".3" stroke-linecap="round" stroke-linejoin="round"/>`}).join('');
+ var rl=rides.map(function(q){var ks=sl(q[0],q[1],q[2]);return `<path d="${pl(ks)}" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="${pl(ks)}" fill="none" stroke="${LN[q[0]][0]}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>`}).join('');
+ var wk=(dy.walks||[]).map(function(w){var a=wp(w[0]),b=wp(w[1]);return `<path d="M${a.join(' ')}L${b.join(' ')}" stroke="#2f7d4f" stroke-width="3" stroke-dasharray="1 6" stroke-linecap="round" fill="none"/><text x="${(a[0]+b[0])/2-6}" y="${(a[1]+b[1])/2+4}" font-size="12">🚶</text>`}).join('');
+ var sset={},ends={};rides.forEach(function(q){sl(q[0],q[1],q[2]).forEach(function(k){sset[k]=1});ends[q[1]]=1;ends[q[2]]=1});
+ var stn=Object.keys(sset).map(function(k){var p=P(ST[k][0],ST[k][1]),big=ends[k];return `<circle cx="${p[0]}" cy="${p[1]}" r="${big?5.5:2.8}" fill="#fff" stroke="#333" stroke-width="${big?2:1.2}"/>`+(big&&ST[k][2]?`<text x="${p[0]+8}" y="${p[1]+4}" font-size="10" font-weight="700" fill="#2b2b2b" stroke="#fff" stroke-width="3" paint-order="stroke">${ST[k][2]}</text>`:'')}).join('');
+ var rg=[[37.5315,126.947,'漢江'],[37.5265,127.045,'江南'],[37.5605,126.903,'麻浦'],[37.5755,126.99,'鐘路']].map(function(t){var p=P(t[0],t[1]);return `<text x="${p[0]}" y="${p[1]}" font-size="11" fill="#5b7f4a" opacity=".75" letter-spacing="3">${t[2]}</text>`}).join('');
+ var rail=rbg+rl+wk,lg=rides.length?'<div style="font-size:12px;margin-top:6px"><span style="color:#00A84D">━ 2號線</span>　<span style="color:#00A5DE">━ 4號線</span>　<span style="color:#CD7C2F">━ 6號線</span>　<span style="color:#0090D2">━ 機場線</span>　<span style="color:#2f7d4f">┈ 步行</span></div>':'<div style="font-size:12px;margin-top:6px;color:var(--mute)">這天的地鐵路線還沒定，目前只畫景點順序，淺色線是首爾地鐵。</div>';
+ var NC={air:[37.4679,126.4352]};
+ function cd(k){return NC[k]||[GS[k][0],GS[k][1]]}
+ function gq(k){var q=GS[k][4];q=q.charAt(0)==='@'?qOf(q.slice(1)):q;return q||cd(k).join(',')}
+ var legs=r.slice(1).map(function(b,n){var a=r[n];if(a===b)return '';var A=cd(a),B=cd(b);return `<li><span class="g">${n+1} ${esc(GS[a][3])} → ${n+2} ${esc(GS[b][3])}</span><a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=${encodeURIComponent(gq(a))}&amp;destination=${encodeURIComponent(gq(b))}">📍Google</a><a class="go" target="_blank" rel="noopener" href="https://map.naver.com/p/directions/${A[1]},${A[0]},${encodeURIComponent(GS[a][3])}/${B[1]},${B[0]},${encodeURIComponent(GS[b][3])}/-/transit">🟢Naver</a></li>`}).join('');
+ var seq=r.map(function(k,n){return (n+1)+' '+GS[k][3]}).join(' → ');
+ return `<div class="card"><h3>今日路線地圖</h3><div style="overflow-x:auto;border-radius:14px"><svg viewBox="0 0 712 400" role="img" aria-label="首爾旅遊路線地圖" style="display:block;width:100%;min-width:640px;height:auto"><defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e0612f"/></marker></defs><rect width="712" height="400" fill="#8fd3cf"/><rect x="10" y="10" width="692" height="380" rx="22" fill="#d4e9ae"/>${mt(290,22,34,38,'#8fa86a')}${mt(256,32,26,28,'#a3b97d')}<ellipse cx="352" cy="178" rx="36" ry="20" fill="#a9c77d"/>${mt(300,350,40,40,'#8fa86a')}${mt(246,360,30,30,'#a3b97d')}${trees}<path d="${rd}" fill="none" stroke="#7ec8d8" stroke-width="22" stroke-linecap="round"/><path d="${rd}" fill="none" stroke="#bfe9ef" stroke-width="11" stroke-linecap="round"/><path d="${rd}" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="2 12" stroke-linecap="round"/><text x="20" y="32" font-size="12" font-weight="700" fill="#2a8f9a" letter-spacing="3">TRAVEL</text><text x="20" y="58" font-size="28" font-weight="900" fill="#e86aa0" stroke="#fff" stroke-width="5" paint-order="stroke">SEOUL</text><text x="610" y="50" font-size="34">☁️</text><text x="650" y="365" font-size="34">🎈</text><text x="${P(37.524,126.958)[0]}" y="${P(37.524,126.958)[1]+4}" font-size="16">⛵</text><text x="${P(37.532,127.022)[0]}" y="${P(37.532,127.022)[1]+4}" font-size="16">⛵</text>${rail}${bds}${dy.k?seg:''}${nodes}${stn}${rg}</svg></div><div style="color:var(--mute);font-size:12px;margin:8px 0">${esc(seq)}<br>依實際方位繪製的示意地圖，不是精確比例。仁川機場在地圖西邊更遠的地方。</div>${lg}<b style="font-size:14px">每段路線導航</b><ul class="plain">${legs}</ul><a class="go" style="margin:8px 0 0" target="_blank" rel="noopener" href="${url}">📍Google 一次看整天</a></div>`}
+
+var LAND='300,110 340,105 380,140 400,170 440,165 480,195 520,185 560,205 600,230 640,260 655,300 640,345 660,385 645,430 620,470 560,500 500,515 450,505 400,520 350,505 300,490 250,495 215,470 220,430 180,415 150,390 100,370 85,330 110,300 95,260 120,230 160,215 180,170 230,155 260,130';
+var PS={air:[62,250],h1:[118,345],hd:[160,295],h2:[222,200],ew:[225,262],gb:[335,185],ms:[335,300],ns:[445,295],gj:[505,215],dd:[580,275],ss:[580,345],sf:[505,345],sn:[395,455],cx:[505,470],jl:[605,450]};
+var SC={gb:2,ms:1.8,ns:1.5,gj:1.9,dd:1.7,hd:1.8,h1:1.8,h2:1.8,ss:1.7,cx:1.7,jl:1.3};
+var EM={ew:'🎓',sf:'🌳',sn:'🦀'};
+var C2='#00A84D',C6='#CD7C2F',CX='#0090D2';
+var DYL=[[['air','h1','t','🚕 計程車','#333'],['h1','hd','w','🚶 走路']],[['h1','ms','m','🚇 6→4號線',C6],['ms','ew','m','🚇 2號線',C2],['ew','hd','m','🚇 2號線',C2],['hd','h1','m','🚇 2→6號線',C2]],[['h1','ss','m','🚇 6→2號線',C6],['ss','sf','w','🚶 走路'],['sf','h1','m','🚇 2→6號線',C2],['h1','h2','m','🚇 6號線',C6],['h2','hd','m','🚇 機場線',CX]],[['h2','gb','u','交通待定'],['gb','gj','u','交通待定'],['gj','dd','u','交通待定'],['dd','ns','u','交通待定'],['ns','ms','u','交通待定'],['ms','h2','u','交通待定']],[['h2','jl','m','🚇 6→2號線',C6],['jl','cx','m','🚇 2號線',C2],['cx','sn','u','交通待定'],['sn','cx','u','交通待定'],['cx','h2','u','交通待定']],[['h2','air','m','🚇 機場線',CX]]];
+var RS={bd:[105,262,'🍲','弘大部隊鍋','Hongdae Budae Jjigae','홍대 부대찌개'],it:[285,268,'🥪','Isaac Toast','Isaac Toast Myeongdong','이삭토스트 명동'],df:[268,325,'🛍','免稅店','Lotte Duty Free Myeongdong','롯데면세점 명동본점'],mh:[390,335,'🥩','명동명한우','명동명한우','명동명한우'],nd:[310,352,'🏪','南大門市場','Namdaemun Market','남대문시장'],sw:[268,232,'🥟','西王水餃','미스터서왔만두 서울 서대문구 신촌역로 16','미스터서왔만두','https://pcmap.place.naver.com/restaurant/36670196/home'],bb:[178,362,'🥯','Brick Bagel','Brick Bagel Seoul','브릭베이글'],oy:[532,300,'💄','Olive Young N','Olive Young N Seongsu','올리브영 N성수'],gt:[628,328,'🍖','馬鈴薯排骨湯','祖傳三代馬鈴薯排骨湯 Seongsu Seoul','소문난성수감자탕'],wd:[215,330,'🍗','翁多來燉雞','翁多來燉雞 Hongdae Seoul','홍대 닭볶음탕'],ts:[275,172,'🐔','土俗村','Tosokchon Samgyetang','토속촌삼계탕','https://naver.me/FbVU1RHs'],mk:[492,282,'🍽','Mokmyeoksan','Mokmyeoksan Horaengi Seoul','목멱산방 남산타워점'],pj:[395,262,'🍢','포장마차','Pojangmacha Myeongdong','명동 포장마차'],bn:[562,452,'🥓','Bon Di','Bon Di BBQ Seoul','본디'],sl:[452,452,'🎰','七星贌場','Seven Luck Casino COEX','세븐럭카지노 코엑스점']};
+var NQ={air:'인천국제공항 제2여객터미널',hd:'홍대 걷고싶은거리',ms:'명동거리',ew:'이대역',ss:'성수동',sf:'서울숲',gb:'경복궁',gj:'광장시장',dd:'동대문디자인플라자',ns:'N서울타워',jl:'롯데월드',cx:'별마당도서관',sn:'신사꽃게당 압구정로데오점'};
+var DST=[[['air'],['h1','t','🚕 計程車'],['bd','w','🚶 走路']],[['h1'],['it','m','🚇 6→4號線',C6],['df','w','🚶 走路'],['mh','w','🚶 走路'],['nd','w','🚶 走路'],['sw','m','🚇 2號線',C2],['hd','m','🚇 2號線',C2],['h1','m','🚇 2→6號線',C2]],[['h1'],['bb','w','🚶 走路'],['oy','m','🚇 6→2號線',C6],['sf','w','🚶 走路'],['gt','w','🚶 走路'],['h1','m','🚇 2→6號線',C2],['h2','m','🚇 6號線',C6],['wd','m','🚇 機場線',CX],['hd','w','🚶 走路']],[['h2'],['ts','u','交通待定'],['gb','w','🚶 走路'],['gj','u','交通待定'],['dd','u','交通待定'],['ns','u','交通待定'],['mk','w','🚶 走路'],['ms','u','交通待定'],['pj','w','🚶 走路']],[['h2'],['bn','m','🚇 6→2號線',C6],['jl','w','🚶 走路'],['cx','m','🚇 2號線',C2],['sn','u','交通待定'],['sl','u','交通待定'],['h2','u','交通待定']],[['h2'],['air','m','🚇 機場線',CX]]];
+RS.bb=[178,362,'🍳','604 seoul','604 seoul Seoul','604 seoul'];
+RS.bp=[160,392,'👓','BLUEPEPPER','BLUEPEPPER Eyewear Mangwon','BLUEPEPPER Eyewear Mangwon'];
+RS.mu=[560,325,'🛍','Musinsa・大林倉庫','Musinsa Store Seongsu','무신사 스토어 성수'];
+DST[2]=[['h1'],['bb','w','🚶 走路'],['bp','w','🚶 走路'],['oy','t','🚕 計程車'],['mu','w','🚶 走路'],['gt','w','🚶 走路'],['sf','w','🚶 走路'],['bp','t','🚕 計程車'],['h2','m','🚇 6號線',C6],['wd','m','🚇 機場線+走路',CX],['hd','w','🚶 走路']];
+function stp(k){return RS[k]?[RS[k][0],RS[k][1]]:PS[k]}
+function snm(k){return RS[k]?RS[k][3]:GS[k][3]}
+function sgq(k){if(RS[k])return RS[k][4];var q=GS[k][4];return q.charAt(0)==='@'?qOf(q.slice(1)):q}
+function snu(k){if(RS[k]&&RS[k][6])return RS[k][6];var q=RS[k]?RS[k][5]:(NQ[k]||sgq(k));return 'https://map.naver.com/p/search/'+encodeURIComponent(q)}
+function rt(i){
+ var st=DST[i],nums={};st.forEach(function(s,n){(nums[s[0]]=nums[s[0]]||[]).push(n+1)});
+ var art=Object.keys(BD).map(function(k){var p=PS[k];return `<g opacity="${nums[k]?1:.55}" transform="translate(${p[0]} ${p[1]+8}) scale(${SC[k]})">${BD[k]}</g>`}).join('')+['ew','sf','sn'].map(function(k){var p=PS[k];return `<text x="${p[0]}" y="${p[1]+8}" font-size="38" text-anchor="middle" opacity="${nums[k]?1:.55}">${EM[k]}</text>`}).join('');
+ var lines=st.slice(1).map(function(s,n){var A=stp(st[n][0]),B=stp(s[0]),dx=B[0]-A[0],dy=B[1]-A[1],L=Math.sqrt(dx*dx+dy*dy)||1,ux=dx/L,uy=dy/L,ra=Math.min(RS[st[n][0]]?18:38,L*.3),rb=Math.min(RS[s[0]]?22:42,L*.3),o=(n%2?1:-1)*Math.min(70,L*.45),a=[A[0]+ux*ra,A[1]+uy*ra],b=[B[0]-ux*rb,B[1]-uy*rb],c=[(A[0]+B[0])/2-uy*o,(A[1]+B[1])/2+ux*o],m=[.25*a[0]+.5*c[0]+.25*b[0],.25*a[1]+.5*c[1]+.25*b[1]],d='M'+a+' Q'+c+' '+b,t=s[1],col=t==='m'?s[3]:t==='w'?'#1e6b3a':t==='t'?'#222':'#e0612f',da=t==='m'?'':'10 7',tx=b[0]-c[0],ty=b[1]-c[1],tl=Math.sqrt(tx*tx+ty*ty)||1;tx/=tl;ty/=tl;
+  var w=s[2].length*11+14;
+  return `<path d="${d}" fill="none" stroke="#fff" stroke-width="${t==='m'?15:11}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${col}" stroke-width="${t==='m'?9:5}" stroke-dasharray="${da}" stroke-linecap="round"/><polygon points="${b[0]+tx*8},${b[1]+ty*8} ${b[0]-tx*10+ty*9},${b[1]-ty*10-tx*9} ${b[0]-tx*10-ty*9},${b[1]-ty*10+tx*9}" fill="${col}" stroke="#fff" stroke-width="2"/><rect x="${m[0]-w/2}" y="${m[1]-11}" width="${w}" height="22" rx="11" fill="#fff" stroke="${col}" stroke-width="2.5"/><text x="${m[0]}" y="${m[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#222">${s[2]}</text>`}).join('');
+ var bad=function(x,y,t){var w=Math.max(20,t.length*7+10);return `<rect x="${x-w/2}" y="${y-10}" width="${w}" height="20" rx="10" fill="#b02a22" stroke="#fff" stroke-width="2"/><text x="${x}" y="${y+1}" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="800" fill="#fff">${t}</text>`};
+ var lab=function(x,y,t){return `<text x="${x}" y="${y}" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" stroke="#1b5f9a" stroke-width="4" paint-order="stroke" stroke-linejoin="round">${t}</text>`};
+ var pins=Object.keys(nums).filter(function(k){return k!=='air'}).map(function(k){var p=stp(k),n=nums[k].join('·');if(RS[k])return `<circle cx="${p[0]}" cy="${p[1]}" r="15" fill="#fff" stroke="#e0612f" stroke-width="3.5"/><text x="${p[0]}" y="${p[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="17">${RS[k][2]}</text>`+lab(p[0],p[1]+32,RS[k][3])+bad(p[0]-16,p[1]-16,n);return lab(p[0],p[1]+30,GS[k][3])+bad(p[0]-30,p[1]-34,n)}).join('');
+ return art+lines+pins}
+function geoMap2(i){
+ var html=geoMap(i),r=GR[i],legs=DYL[i]||[],nums={};r.forEach(function(k,n){(nums[k]=nums[k]||[]).push(n+1)});
+ var trees=[[185,250,'🌳'],[300,235,'🍁'],[255,335,'🌳'],[420,235,'🍁'],[470,255,'🌳'],[625,310,'🍁'],[365,365,'🌳'],[200,445,'🍁'],[300,425,'🌳'],[450,435,'🍁'],[545,420,'🌳'],[400,150,'🌳'],[455,190,'🍁']].map(function(t){return `<text x="${t[0]}" y="${t[1]}" font-size="22" text-anchor="middle">${t[2]}</text>`}).join('');
+ var parks=[[445,305,55,32],[505,350,45,22],[330,135,40,22],[560,440,40,20]].map(function(e){return `<ellipse cx="${e[0]}" cy="${e[1]}" rx="${e[2]}" ry="${e[3]}" fill="#9bd36a"/>`}).join('');
+ var roads='<path d="M160 295Q200 330 280 330T335 300M335 215V285M365 300L420 296M440 270Q470 230 505 215M535 235L565 262M335 300Q300 360 330 420M225 240L180 290M580 300V330" stroke="#fff3cf" stroke-width="8" fill="none" stroke-linecap="round"/>';
+ var RV='M70 400C140 400 180 380 250 385S380 405 450 390S560 370 640 390L730 395';
+ var lg=legs.map(function(l,n){var A=PS[l[0]],B=PS[l[1]],dx=B[0]-A[0],dy=B[1]-A[1],L=Math.sqrt(dx*dx+dy*dy),ux=dx/L,uy=dy/L,o=(n%2?1:-1)*52,a=[A[0]+ux*36,A[1]+uy*36],b=[B[0]-ux*40,B[1]-uy*40],c=[(A[0]+B[0])/2-uy*o,(A[1]+B[1])/2+ux*o],m=[.25*a[0]+.5*c[0]+.25*b[0],.25*a[1]+.5*c[1]+.25*b[1]],d='M'+a+' Q'+c+' '+b,col=l[4]||'#fff',tx=b[0]-c[0],ty=b[1]-c[1],tl=Math.sqrt(tx*tx+ty*ty)||1;tx/=tl;ty/=tl;
+  var line=l[2]==='m'?`<path d="${d}" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${col}" stroke-width="6" stroke-linecap="round"/>`:l[2]==='w'?`<path d="${d}" fill="none" stroke="#2f7d4f" stroke-width="4" stroke-dasharray="1 7" stroke-linecap="round"/>`:l[2]==='t'?`<path d="${d}" fill="none" stroke="#333" stroke-width="4" stroke-dasharray="9 6"/>`:`<path d="${d}" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round"/>`;
+  var ar=`<polygon points="${b[0]+tx*6},${b[1]+ty*6} ${b[0]-tx*9+ty*7},${b[1]-ty*9-tx*7} ${b[0]-tx*9-ty*7},${b[1]-ty*9+tx*7}" fill="${l[2]==='m'?col:l[2]==='w'?'#2f7d4f':l[2]==='t'?'#333':'#fff'}"/>`;
+  var w=l[3].length*11+12;
+  return line+ar+`<rect x="${m[0]-w/2}" y="${m[1]-10}" width="${w}" height="20" rx="10" fill="#fff" stroke="${col==='#fff'?'#999':col}" stroke-width="2"/><text x="${m[0]}" y="${m[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#2b2b2b">${l[3]}</text>`}).join('');
+ var nd=Object.keys(PS).filter(function(k){return k!=='air'}).map(function(k){var p=PS[k],on=nums[k],nm=GS[k][3],lab=(on?on.join('·')+' ':'')+nm,art=BD[k]?`<g transform="translate(${p[0]} ${p[1]+8}) scale(${SC[k]})">${BD[k]}</g>`:`<text x="${p[0]}" y="${p[1]+8}" font-size="38" text-anchor="middle">${EM[k]}</text>${k==='sf'?`<text x="${p[0]-24}" y="${p[1]+14}" font-size="26">🌳</text><text x="${p[0]+12}" y="${p[1]+14}" font-size="26">🌲</text>`:''}`;
+  return `<g opacity="${on?1:.6}">${art}<text x="${p[0]}" y="${p[1]+30}" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" stroke="#1b5f9a" stroke-width="4" paint-order="stroke" stroke-linejoin="round">${lab}</text></g>`}).join('');
+ var ap=nums.air?'✈️':'✈️',apl=(nums.air?nums.air.join('·')+' ':'')+'仁川機場';
+ var svg=`<svg viewBox="0 0 712 560" role="img" aria-label="首爾旅遊地圖" style="display:block;width:100%;min-width:640px;height:auto"><defs><clipPath id="lc"><polygon points="${LAND}"/></clipPath></defs><rect width="712" height="560" fill="#2f86c9"/><g fill="#fff"><ellipse cx="470" cy="62" rx="34" ry="14"/><ellipse cx="494" cy="50" rx="22" ry="15"/><ellipse cx="620" cy="98" rx="30" ry="12"/><ellipse cx="640" cy="88" rx="18" ry="12"/><ellipse cx="60" cy="520" rx="30" ry="11"/></g><text x="22" y="88" font-size="72" font-weight="900" fill="#fff" stroke="#1b5f9a" stroke-width="10" paint-order="stroke" stroke-linejoin="round" letter-spacing="2">SEOUL</text><text x="26" y="116" font-size="16" font-weight="800" fill="#ffe27a" stroke="#1b5f9a" stroke-width="4" paint-order="stroke">何 阿珠媽的逆襲</text><polygon points="${LAND}" transform="translate(0 12)" fill="#c98a2a"/><polygon points="${LAND}" fill="#f4bb4a"/><g clip-path="url(#lc)">${parks}${roads}<path d="${RV}" fill="none" stroke="#7fc6ea" stroke-width="26"/><path d="${RV}" fill="none" stroke="#a9def5" stroke-width="14"/></g><text x="285" y="396" font-size="12" fill="#fff" opacity=".9" letter-spacing="4">漢江</text>${trees}<path d="M8 232Q30 236 46 246" stroke="#fff" stroke-width="4" stroke-dasharray="3 7" fill="none" stroke-linecap="round"/><text x="62" y="262" font-size="34" text-anchor="middle">${ap}</text><text x="62" y="290" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" stroke="#1b5f9a" stroke-width="4" paint-order="stroke">${apl}</text>${rt(i)}<g transform="translate(675 175)"><ellipse rx="18" ry="22" fill="#ff7aa8"/><path d="M-18 0Q0 40 18 0" fill="#fff" opacity=".5"/><rect x="-5" y="26" width="10" height="8" fill="#8a5a2b"/></g><g transform="translate(40 470)"><ellipse rx="16" ry="20" fill="#ffb347"/><path d="M-16 0Q0 36 16 0" fill="#fff" opacity=".5"/><rect x="-5" y="24" width="10" height="8" fill="#8a5a2b"/></g><g transform="translate(265 468)"><circle cx="-12" cy="-30" r="6" fill="#f6d0b0"/><rect x="-18" y="-24" width="12" height="10" rx="3" fill="#e5473a"/><polygon points="-20,-14 -4,-14 2,4 -26,4" fill="#ff9ec4"/><circle cx="14" cy="-30" r="6" fill="#f6d0b0"/><rect x="8" y="-24" width="12" height="12" rx="3" fill="#4c8fd9"/><rect x="9" y="-12" width="10" height="16" fill="#6b7a8f"/></g></svg>`;
+ html=html.replace(/<svg viewBox="0 0 712 400"[\s\S]*?<\/svg>/,function(){return svg});
+ html=html.replace(/<div style="font-size:12px;margin-top:6px[^>]*>[\s\S]*?<\/div>/,'<div style="font-size:12px;margin-top:6px"><span style="color:#00A84D">━ 2號線</span>　<span style="color:#00A5DE">━ 4號線</span>　<span style="color:#CD7C2F">━ 6號線</span>　<span style="color:#0090D2">━ 機場線</span>　<span style="color:#2f7d4f">┈ 步行</span>　<span>┈ 白色虛線：交通待定</span></div>');
+ html=html.replace('依實際方位繪製的示意地圖，不是精確比例。仁川機場在地圖西邊更遠的地方。','手繪風格的示意地圖，景點的相對位置大致照實際方向，距離和形狀都是簡化的。');
+ var st=DST[i],qs=st.map(function(s){return sgq(s[0])}).filter(Boolean),way=qs.slice(1,-1).slice(0,8).map(encodeURIComponent).join('%7C'),gurl='https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin='+encodeURIComponent(qs[0]||'')+'&amp;destination='+encodeURIComponent(qs[qs.length-1]||'')+(way?'&amp;waypoints='+way:'');
+ var rows=st.slice(1).map(function(s,n){var a=st[n][0],b=s[0];return `<li><span class="g">${n+1} ${esc(snm(a))} → ${n+2} ${esc(snm(b))}<br><small style="color:var(--mute)">${s[2]}</small></span><a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=transit&amp;origin=${encodeURIComponent(sgq(a))}&amp;destination=${encodeURIComponent(sgq(b))}">📍Google</a><a class="go" target="_blank" rel="noopener" href="${snu(b)}">🟢Naver</a></li>`}).join('');
+ html=html.replace(/<ul class="plain">[\s\S]*?<\/ul>/,function(){return '<ul class="plain">'+rows+'</ul>'});
+ html=html.replace(/<a class="go" style="margin:8px 0 0"[^>]*>[\s\S]*?<\/a>/,function(){return '<a class="go" style="margin:8px 0 0" target="_blank" rel="noopener" href="'+gurl+'">📍Google 一次看整天</a>'});
+ html=html.replace('白色虛線：交通待定','橘色虛線：交通待定').replace('┈ 步行','┈ 步行（深綠色）');
+ return html}
+
+var SC2={gb:1.5,ms:1.4,ns:1.2,gj:1.5,dd:1.4,hd:1.4,h1:1.4,h2:1.4,ss:1.3,cx:1.3,jl:1};
+function geoMap4(i){
+ var html=geoMap2(i),st=DST[i],W=712,H=620,T=185,Pd=75,nums={},keys=[];
+ st.forEach(function(s,n){(nums[s[0]]=nums[s[0]]||[]).push(n+1);if(keys.indexOf(s[0])<0)keys.push(s[0])});
+ var n=keys.length,xs=keys.map(function(k){return stp(k)[0]}),ys=keys.map(function(k){return stp(k)[1]}),mnx=Math.min.apply(0,xs),mxx=Math.max.apply(0,xs),mny=Math.min.apply(0,ys),mxy=Math.max.apply(0,ys),sc=Math.min((W-2*Pd)/((mxx-mnx)||1),(H-T-Pd)/((mxy-mny)||1),3.2),Q={};
+ keys.forEach(function(k,j){Q[k]=[W/2+(xs[j]-(mnx+mxx)/2)*sc,(T+H-Pd)/2+(ys[j]-(mny+mxy)/2)*sc]});
+ var minD=Math.min(150,Math.sqrt((W-2*Pd)*(H-T-Pd)/n)*.8);
+ for(var it=0;it<150;it++){for(var a=0;a<n;a++)for(var b=a+1;b<n;b++){var A=Q[keys[a]],B=Q[keys[b]],dx=B[0]-A[0],dy=B[1]-A[1],d=Math.sqrt(dx*dx+dy*dy)||.01;if(d<minD){var f=(minD-d)/2/d;A[0]-=dx*f;A[1]-=dy*f;B[0]+=dx*f;B[1]+=dy*f}}keys.forEach(function(k){var p=Q[k];p[0]=Math.max(Pd,Math.min(W-Pd,p[0]));p[1]=Math.max(T,Math.min(H-Pd,p[1]))})}
+ var SO={sn:1,cx:1,jl:1,sl:1,bn:1},nY=[],sY=[];keys.forEach(function(k){(SO[k]?sY:nY).push(Q[k][1])});
+ var ry=H-36;if(nY.length&&sY.length){var mxN=Math.max.apply(0,nY),mnS=Math.min.apply(0,sY);ry=mxN<mnS?(mxN+mnS)/2:(mxN+mnS)/2}
+ var RV='M0 '+ry+'C150 '+(ry-34)+' 250 '+(ry+34)+' 380 '+ry+'S600 '+(ry-34)+' 712 '+ry;
+ var near=function(k){return RS[k]?{x:Q[k][0],y:Q[k][1],r:30}:{x:Q[k][0],y:Q[k][1]-20,r:54}};
+ var chips=[],lines=st.slice(1).map(function(s,j){var ka=st[j][0],kb=s[0],A=Q[ka],B=Q[kb],dx=B[0]-A[0],dy=B[1]-A[1],L=Math.sqrt(dx*dx+dy*dy)||1,ux=dx/L,uy=dy/L,ra=Math.min(RS[ka]?18:36,L*.3),rb=Math.min(RS[kb]?22:40,L*.3),a=[A[0]+ux*ra,A[1]+uy*ra],b=[B[0]-ux*rb,B[1]-uy*rb],best=null,bestBad=99;
+  [.5,-.5,1,-1,.15,-.15,1.5,-1.5].forEach(function(m){if(bestBad===0)return;var o=m*Math.min(90,L*.5)*(j%2?1:-1),c=[(A[0]+B[0])/2-uy*o*2,(A[1]+B[1])/2+ux*o*2],bad=0;for(var t=.08;t<=.92;t+=.06){var px=(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],py=(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1];keys.forEach(function(k){if(k===ka||k===kb)return;var q=near(k);if(Math.sqrt((px-q.x)*(px-q.x)+(py-q.y)*(py-q.y))<q.r)bad++})}if(bad<bestBad){bestBad=bad;best=c}});
+  var c=best,tp=s[1],col=tp==='m'?s[3]:tp==='w'?'#1e6b3a':tp==='t'?'#222':'#e0612f',da=tp==='m'?'':'10 7',d='M'+a+' Q'+c+' '+b,tx=b[0]-c[0],ty=b[1]-c[1],tl=Math.sqrt(tx*tx+ty*ty)||1;tx/=tl;ty/=tl;
+  var w=s[2].length*11+14,mp=null;[.5,.35,.65,.25,.75].forEach(function(t){if(mp)return;var px=(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],py=(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1],ok=true;keys.forEach(function(k){var q=near(k);if(Math.abs(px-q.x)<w/2+(RS[k]?18:40)&&Math.abs(py-q.y)<(RS[k]?30:54))ok=false});chips.forEach(function(q){if(Math.abs(px-q[0])<(w+q[2])/2+4&&Math.abs(py-q[1])<26)ok=false});if(ok)mp=[px,py]});
+  if(!mp)mp=[.25*a[0]+.5*c[0]+.25*b[0],.25*a[1]+.5*c[1]+.25*b[1]];chips.push([mp[0],mp[1],w]);
+  return `<path d="${d}" fill="none" stroke="#fff" stroke-width="${tp==='m'?15:11}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${col}" stroke-width="${tp==='m'?9:5}" stroke-dasharray="${da}" stroke-linecap="round"/><polygon points="${b[0]+tx*8},${b[1]+ty*8} ${b[0]-tx*10+ty*9},${b[1]-ty*10-tx*9} ${b[0]-tx*10-ty*9},${b[1]-ty*10+tx*9}" fill="${col}" stroke="#fff" stroke-width="2"/><rect x="${mp[0]-w/2}" y="${mp[1]-11}" width="${w}" height="22" rx="11" fill="#fff" stroke="${col}" stroke-width="2.5"/><text x="${mp[0]}" y="${mp[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#222">${s[2]}</text>`}).join('');
+ var bad2=function(x,y,t){var w=Math.max(20,t.length*7+10);return `<rect x="${x-w/2}" y="${y-10}" width="${w}" height="20" rx="10" fill="#b02a22" stroke="#fff" stroke-width="2"/><text x="${x}" y="${y+1}" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="800" fill="#fff">${t}</text>`};
+ var lab2=function(x,y,t){return `<text x="${x}" y="${y}" text-anchor="middle" font-size="13" font-weight="800" fill="#fff" stroke="#1b5f9a" stroke-width="4" paint-order="stroke" stroke-linejoin="round">${t}</text>`};
+ var art=keys.map(function(k){var p=Q[k];if(BD[k])return `<g transform="translate(${p[0]} ${p[1]+8}) scale(${SC2[k]})">${BD[k]}</g>`;if(k==='air')return `<text x="${p[0]}" y="${p[1]+8}" font-size="42" text-anchor="middle">✈️</text>`;if(EM[k])return `<text x="${p[0]}" y="${p[1]+8}" font-size="40" text-anchor="middle">${EM[k]}</text>`+(k==='sf'?`<text x="${p[0]-30}" y="${p[1]+14}" font-size="26">🌳</text><text x="${p[0]+14}" y="${p[1]+14}" font-size="26">🌲</text>`:'');return ''}).join('');
+ var pins=keys.map(function(k){var p=Q[k],nn=nums[k].join('·');if(RS[k])return `<circle cx="${p[0]}" cy="${p[1]}" r="15" fill="#fff" stroke="#e0612f" stroke-width="3.5"/><text x="${p[0]}" y="${p[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="17">${RS[k][2]}</text>`+lab2(p[0],p[1]+32,RS[k][3])+bad2(p[0]-16,p[1]-16,nn);return lab2(p[0],p[1]+30,k==='air'?'仁川機場':GS[k][3])+bad2(p[0]-30,p[1]-34,nn)}).join('');
+ var trees=[[34,215],[40,330],[36,450],[676,225],[670,340],[678,470],[120,585],[300,590],[470,590],[600,585],[110,190]].filter(function(t){return keys.every(function(k){var p=Q[k];return Math.abs(t[0]-p[0])+Math.abs(t[1]-p[1])>110})}).map(function(t,j){return `<text x="${t[0]}" y="${t[1]}" font-size="24" text-anchor="middle">${j%2?'🍁':'🌳'}</text>`}).join('');
+ var svg=`<svg viewBox="0 0 712 ${H}" role="img" aria-label="今天的路線地圖" style="display:block;width:100%;min-width:640px;height:auto"><defs><clipPath id="lc"><rect x="12" y="150" width="688" height="${H-162}" rx="40"/></clipPath></defs><rect width="712" height="${H}" fill="#2f86c9"/><g fill="#fff"><ellipse cx="470" cy="62" rx="34" ry="14"/><ellipse cx="494" cy="50" rx="22" ry="15"/><ellipse cx="620" cy="98" rx="30" ry="12"/><ellipse cx="640" cy="88" rx="18" ry="12"/></g><text x="22" y="88" font-size="72" font-weight="900" fill="#fff" stroke="#1b5f9a" stroke-width="10" paint-order="stroke" stroke-linejoin="round" letter-spacing="2">SEOUL</text><text x="26" y="116" font-size="16" font-weight="800" fill="#ffe27a" stroke="#1b5f9a" stroke-width="4" paint-order="stroke">何 阿珠媽的逆襲　Day ${i+1}</text><rect x="12" y="160" width="688" height="${H-162}" rx="40" fill="#c98a2a"/><rect x="12" y="150" width="688" height="${H-162}" rx="40" fill="#f4bb4a"/><g clip-path="url(#lc)"><ellipse cx="110" cy="240" rx="70" ry="34" fill="#9bd36a"/><ellipse cx="610" cy="${H-120}" rx="80" ry="36" fill="#9bd36a"/><ellipse cx="600" cy="230" rx="60" ry="28" fill="#9bd36a"/><path d="${RV}" fill="none" stroke="#7fc6ea" stroke-width="34"/><path d="${RV}" fill="none" stroke="#a9def5" stroke-width="20"/></g><text x="${W-70}" y="${ry-24}" font-size="12" fill="#fff" letter-spacing="4" stroke="#4aa3d6" stroke-width="3" paint-order="stroke">漢江</text>${trees}<g transform="translate(665 175)"><ellipse rx="16" ry="20" fill="#ff7aa8"/><path d="M-16 0Q0 34 16 0" fill="#fff" opacity=".5"/><rect x="-5" y="24" width="10" height="8" fill="#8a5a2b"/></g>${art}${lines}${pins}</svg>`;
+ html=html.replace(/<svg viewBox="0 0 712 560"[\s\S]*?<\/svg>/,function(){return svg});
+ html=html.replace('手繪風格的示意地圖，景點的相對位置大致照實際方向，距離和形狀都是簡化的。','只放大今天會去的地方。相對方位大致照實際，為了不重疊，距離有拉開，不是實際比例。');
+ return html}
+
+function geoMap5(i){
+ var html=geoMap2(i),st=DST[i],W=712,H=520,T=50,Pd=65,nums={},keys=[];
+ st.forEach(function(s,n){(nums[s[0]]=nums[s[0]]||[]).push(n+1);if(keys.indexOf(s[0])<0)keys.push(s[0])});
+ var n=keys.length,xs=keys.map(function(k){return stp(k)[0]}),ys=keys.map(function(k){return stp(k)[1]}),mnx=Math.min.apply(0,xs),mxx=Math.max.apply(0,xs),mny=Math.min.apply(0,ys),mxy=Math.max.apply(0,ys),sc=Math.min((W-2*Pd)/((mxx-mnx)||1),(H-T-Pd)/((mxy-mny)||1),3.2),Q={};
+ keys.forEach(function(k,j){Q[k]=[W/2+(xs[j]-(mnx+mxx)/2)*sc,(T+H-Pd)/2+(ys[j]-(mny+mxy)/2)*sc]});
+ var minD=Math.min(140,Math.sqrt((W-2*Pd)*(H-T-Pd)/n)*.8);
+ for(var it=0;it<150;it++){for(var a=0;a<n;a++)for(var b=a+1;b<n;b++){var A=Q[keys[a]],B=Q[keys[b]],dx=B[0]-A[0],dy=B[1]-A[1],d=Math.sqrt(dx*dx+dy*dy)||.01;if(d<minD){var f=(minD-d)/2/d;A[0]-=dx*f;A[1]-=dy*f;B[0]+=dx*f;B[1]+=dy*f}}keys.forEach(function(k){var p=Q[k];p[0]=Math.max(Pd,Math.min(W-Pd,p[0]));p[1]=Math.max(T,Math.min(H-Pd,p[1]))})}
+ var SO={sn:1,cx:1,jl:1,sl:1,bn:1},nY=[],sY=[];keys.forEach(function(k){(SO[k]?sY:nY).push(Q[k][1])});
+ var ry=H-26;if(nY.length&&sY.length){ry=(Math.max.apply(0,nY)+Math.min.apply(0,sY))/2}
+ var RV='M0 '+ry+'C150 '+(ry-26)+' 250 '+(ry+26)+' 380 '+ry+'S600 '+(ry-26)+' 712 '+ry;
+ var chips=[],lines=st.slice(1).map(function(s,j){var ka=st[j][0],kb=s[0],A=Q[ka],B=Q[kb],dx=B[0]-A[0],dy=B[1]-A[1],L=Math.sqrt(dx*dx+dy*dy)||1,ux=dx/L,uy=dy/L,r1=Math.min(24,L*.3),a=[A[0]+ux*r1,A[1]+uy*r1],b=[B[0]-ux*r1,B[1]-uy*r1],best=null,bestBad=99;
+  [.5,-.5,1,-1,.15,-.15,1.5,-1.5].forEach(function(m){if(bestBad===0)return;var o=m*Math.min(80,L*.5)*(j%2?1:-1),c=[(A[0]+B[0])/2-uy*o*2,(A[1]+B[1])/2+ux*o*2],bad=0;for(var t=.1;t<=.9;t+=.06){var px=(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],py=(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1];keys.forEach(function(k){if(k===ka||k===kb)return;var q=Q[k];if(Math.sqrt((px-q[0])*(px-q[0])+(py-q[1])*(py-q[1]))<40)bad++})}if(bad<bestBad){bestBad=bad;best=c}});
+  var c=best,tp=s[1],col=tp==='m'?s[3]:tp==='w'?'#1e6b3a':tp==='t'?'#222':'#e0612f',da=tp==='m'?'':'9 6',d='M'+a+' Q'+c+' '+b,tx=b[0]-c[0],ty=b[1]-c[1],tl=Math.sqrt(tx*tx+ty*ty)||1;tx/=tl;ty/=tl;
+  var txt=tp==='m'?s[2]:tp==='u'?'?':s[2].split(' ')[0],w=tp==='m'?s[2].length*11+14:26,mp=null;[.5,.35,.65,.25,.75].forEach(function(t){if(mp)return;var px=(1-t)*(1-t)*a[0]+2*(1-t)*t*c[0]+t*t*b[0],py=(1-t)*(1-t)*a[1]+2*(1-t)*t*c[1]+t*t*b[1],ok=true;keys.forEach(function(k){var q=Q[k];if(Math.abs(px-q[0])<w/2+34&&Math.abs(py-q[1])<44)ok=false});chips.forEach(function(q){if(Math.abs(px-q[0])<(w+q[2])/2+4&&Math.abs(py-q[1])<26)ok=false});if(ok)mp=[px,py]});
+  if(!mp)mp=[.25*a[0]+.5*c[0]+.25*b[0],.25*a[1]+.5*c[1]+.25*b[1]];chips.push([mp[0],mp[1],w]);
+  return `<path d="${d}" fill="none" stroke="#fff" stroke-width="${tp==='m'?12:9}" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${col}" stroke-width="${tp==='m'?7:4}" stroke-dasharray="${da}" stroke-linecap="round"/><polygon points="${b[0]+tx*6},${b[1]+ty*6} ${b[0]-tx*8+ty*7},${b[1]-ty*8-tx*7} ${b[0]-tx*8-ty*7},${b[1]-ty*8+tx*7}" fill="${col}"/><rect x="${mp[0]-w/2}" y="${mp[1]-11}" width="${w}" height="22" rx="11" fill="#fff" stroke="${col}" stroke-width="2"/><text x="${mp[0]}" y="${mp[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#222">${txt}</text>`}).join('');
+ var nodes=keys.map(function(k){var p=Q[k],t=nums[k].join('·'),w=Math.max(32,t.length*9+14),col=RS[k]?'#e0612f':(k==='h1'||k==='h2')?'#4c8fd9':'#b02a22',nm=k==='air'?'仁川機場':snm(k);return `<rect x="${p[0]-w/2}" y="${p[1]-15}" width="${w}" height="30" rx="15" fill="${col}" stroke="#fff" stroke-width="3"/><text x="${p[0]}" y="${p[1]+1}" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="800" fill="#fff">${t}</text><text x="${p[0]}" y="${p[1]+34}" text-anchor="middle" font-size="13" font-weight="700" fill="#2b2b2b" stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">${nm}</text>`}).join('');
+ var svg=`<svg viewBox="0 0 712 ${H}" role="img" aria-label="今天的路線地圖" style="display:block;width:100%;min-width:600px;height:auto"><defs><clipPath id="lc"><rect x="6" y="6" width="700" height="${H-12}" rx="22"/></clipPath></defs><rect x="6" y="6" width="700" height="${H-12}" rx="22" fill="#f3efe4" stroke="#e2dccb" stroke-width="2"/><g clip-path="url(#lc)"><path d="${RV}" fill="none" stroke="#bfe3f2" stroke-width="28"/></g><text x="${W-64}" y="${ry-20}" font-size="11" fill="#5aa5c8" letter-spacing="4">漢江</text>${lines}${nodes}</svg>`;
+ html=html.replace(/<svg viewBox="0 0 712 560"[\s\S]*?<\/svg>/,function(){return svg});
+ html=html.replace('手繪風格的示意地圖，景點的相對位置大致照實際方向，距離和形狀都是簡化的。','簡化的示意地圖，只畫今天會去的地方，方向大致照實際，距離為了不重疊有拉開。');
+ return html}
+
+// days
+var cur=lsGet("day",0);
+function renderDays(){
+ $("#days").innerHTML=DAYS.map(function(x,i){return '<button data-i="'+i+'" class="'+(i===cur?"on":"")+'"><b>Day '+(i+1)+'</b>'+x.d+'（'+x.w+'）</button>'}).join("");
+ var x=DAYS[cur];
+ $("#day").innerHTML='<div class="dayhead"><h2>'+esc(x.title)+'</h2><p>'+esc(x.area)+'</p></div><ol class="tl">'+x.items.map(function(it){
+  return '<li class="'+(it.food?"food":"")+'">'+(it.t?'<div class="t">'+esc(it.t)+'</div>':'')+'<div class="n">'+esc(it.n)+navLink(it.n)+'</div>'+(it.d?'<div class="d">'+(it.warn?'<span class="tag w">留意</span>':'')+esc(it.d)+'</div>':'')+'</li>'}).join("")+'</ol>'+geoMap5(cur);
+}
+$("#days").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;cur=+b.dataset.i;lsSet("day",cur);renderDays()});
+renderDays();
+
+// saved text inputs
+var DEF={h1a:"25-7 World Cup-ro 11-gil 유호그라시아 202호, 서울, 首爾 04018, 南韓",h2a:"18-10 Maebongsan-ro 2an-gil 601호, 首爾, 首爾 03927, 南韓"};
+document.querySelectorAll("[data-save]").forEach(function(el){el.value=lsGet("s_"+el.dataset.save,"")||DEF[el.dataset.save]||"";el.addEventListener("input",function(){lsSet("s_"+el.dataset.save,el.value);renderDays()})});
+var memo=$("#memo");memo.value=lsGet("memo","");memo.addEventListener("input",function(){lsSet("memo",memo.value)});renderDays();
+
+// calculator
+function fmt(n){return Math.round(n).toLocaleString("en-US")}
+function calc(){
+ var r=parseFloat($("#rate").value)||0,s=$("#expr").value.replace(/[×x]/g,"*").replace(/÷/g,"/").replace(/,/g,"");
+ var v=0;if(/^[0-9+\-*/().\s]+$/.test(s)){try{v=Function('"use strict";return ('+s+')')()||0}catch(e){v=0}}
+ if(!isFinite(v))v=0;
+ $("#out").firstChild.textContent="NT$ "+fmt(v*r);$("#outk").textContent="₩ "+fmt(v);
+}
+$("#rate").value=lsGet("rate","0.022");
+$("#rate").addEventListener("input",function(){lsSet("rate",$("#rate").value);calc();renderExp()});
+$("#expr").addEventListener("input",calc);calc();
+
+// expenses
+var exp=lsGet("exp",[]);
+function renderExp(){
+ var r=parseFloat($("#rate").value)||0,t=0;
+ $("#elist").innerHTML=exp.map(function(e,i){t+=e.k;return '<li><span class="g">'+esc(e.n)+'</span><span>₩ '+fmt(e.k)+'</span><button class="x" data-i="'+i+'" aria-label="刪除">×</button></li>'}).join("")||'<li style="color:var(--mute)">還沒有記錄，先新增第一筆。</li>';
+ $("#etotal").innerHTML='₩ '+fmt(t)+'<small>約 NT$ '+fmt(t*r)+'</small>';
+}
+$("#eadd").addEventListener("click",function(){var n=$("#en").value.trim(),k=parseFloat($("#ek").value);if(!n||!(k>0))return;exp.push({n:n,k:k});lsSet("exp",exp);$("#en").value="";$("#ek").value="";renderExp()});
+$("#elist").addEventListener("click",function(e){var b=e.target.closest(".x");if(!b)return;exp.splice(+b.dataset.i,1);lsSet("exp",exp);renderExp()});
+renderExp();
+
+// foods
+var fdone=lsGet("fdone",{});
+function renderFood(){
+ $("#foods").innerHTML=FOODS.map(function(f,i){return '<li class="'+(fdone[i]?"done":"")+'"><input type="checkbox" data-i="'+i+'" '+(fdone[i]?"checked":"")+' aria-label="吃過了"><span class="g">'+esc(f[0])+navLink(f[0])+'</span><span class="tag">'+(typeof f[1]==='number'?'Day '+f[1]:f[1])+'</span></li>'}).join("");
+}
+$("#foods").addEventListener("change",function(e){var c=e.target;if(c.type!=="checkbox")return;fdone[c.dataset.i]=c.checked;lsSet("fdone",fdone);renderFood()});
+renderFood();
+
+var CHK=[["住宿 1（Day 1 宵夜）",[["BHC치킨 합정점","BHC치킨 합정점","ChIJC-X8HQCZfDURAbGFaDGUKag","約 0.4 公里"],["교촌치킨 망원2동점","교촌치킨 망원2동점","ChIJYX7vSQeZfDURIh54cvcShFs","約 0.5 公里"],["Kyochon Chicken Hongdae","교촌치킨 홍대","ChIJOc4lEduYfDURupLmvgHXcMs","約 0.9 公里"]]],["住宿 2（Day 3 宵夜）",[["교촌치킨 상암점","교촌치킨 상암점","ChIJaXiZ4g2ZfDUR6T48w1h2DFE","約 0.1 公里"],["BHC치킨 디지털미디어시티점","BHC치킨 디지털미디어시티점","ChIJm6L3pGCZfDURPRn-tFeplz8","約 1.2 公里"],["성산2동점교촌치킨","성산2동점교촌치킨","ChIJY0jkXRmZfDURaiU2bs67XxA","約 1.3 公里"]]]];
+var SHOP=[["Olive Young 美妝連鎖（行程經過的區域）",[["弘大・合井","Day 1、住宿 1 附近","Olive Young Hongdae","올리브영 홍대"],["明洞","Day 2","Olive Young Myeongdong Flagship","올리브영 명동 플래그십"],["聖水洞","Day 3","Olive Young N Seongsu","올리브영 N성수"],["東大門","Day 4","Olive Young Dongdaemun","올리브영 동대문"],["蠶室・樂天","Day 5","Olive Young Jamsil","올리브영 잠실"],["COEX","Day 5","Olive Young COEX Mall","올리브영 코엑스"]]],["聖水洞潮牌（Day 3）",[["ADER ERROR 아더에러","","ADER ERROR Seongsu","아더에러 성수"],["thisisneverthat 디스이즈네버댓","","thisisneverthat Seongsu","디스이즈네버댓 성수"],["Matin Kim 마뗑킴","","Matin Kim Seongsu","마뗑킴 성수"],["Tamburins 탬버린즈","","Tamburins Seongsu","탬버린즈 성수"],["Andersson Bell 앤더슨벨","","Andersson Bell Seongsu","앤더슨벨 성수"]]],["弘大潮牌（Day 1、住宿 1 附近）",[["NERDY 널디","","NERDY Hongdae","널디 홍대"],["COVERNAT 커버낫","","Covernat Hongdae","커버낫 홍대"],["MUSINSA STANDARD 무신사 스탠다드","","Musinsa Standard Hongdae","무신사 스탠다드 홍대"],["GENTLE MONSTER 젠틀몬스터","","Gentle Monster Hongdae","젠틀몬스터 홍대"]]]];
+function gb(q,id){return '<a class="go" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(q)+(id?'&amp;query_place_id='+id:'')+'">📍Google</a>'}
+function nb(q){return '<a class="go" target="_blank" rel="noopener" href="https://map.naver.com/p/search/'+encodeURIComponent(q)+'">🟢Naver</a>'}
+function renderChk(){$("#chk").innerHTML=CHK.map(function(h){return '<b>'+esc(h[0])+'</b><ul class="plain">'+h[1].map(function(s){return '<li><span class="g">'+esc(s[0])+'<br><small style="color:var(--mute)">'+(CNK[s[2]]?esc(CNK[s[2]])+'　':'')+'直線 '+esc(s[3])+'</small></span>'+gb(s[0],s[2])+nb(s[1])+'</li>'}).join("")+'</ul>'}).join("")}
+function renderShop(){$("#shop").innerHTML='<div class="note" style="background:var(--accsoft);color:var(--acc)">這些是搜尋連結，會列出該區的分店或門市。店面可能搬遷，請以地圖顯示為準。</div>'+SHOP.map(function(g){return '<div class="card"><h3>'+esc(g[0])+'</h3><ul class="plain">'+g[1].map(function(s){return '<li><span class="g">'+esc(s[0])+((CN[s[0].split(" ")[0]]||s[1])?'<br><small style="color:var(--mute)">'+esc(CN[s[0].split(" ")[0]]||s[1])+'</small>':'')+'</span>'+gb(s[2])+nb(s[3])+'</li>'}).join("")+'</ul></div>'}).join("")}
+var CN={ADER:"韓國設計品牌，聖水洞有旗艦店",thisisneverthat:"韓國街頭品牌",Matin:"韓國女裝品牌",Tamburins:"韓國香氛・護手霜品牌",Andersson:"韓國設計師品牌",NERDY:"韓國街頭品牌",COVERNAT:"韓國街頭品牌",MUSINSA:"韓國潮流平台的平價基本款",GENTLE:"韓國眼鏡・太陽眼鏡品牌"};
+var CNK={"ChIJC-X8HQCZfDURAbGFaDGUKag":"BHC 炸雞 合井店","ChIJYX7vSQeZfDURIh54cvcShFs":"橋村炸雞 望遠2洞店","ChIJOc4lEduYfDURupLmvgHXcMs":"橋村炸雞 弘大店","ChIJaXiZ4g2ZfDUR6T48w1h2DFE":"橋村炸雞 上岩店","ChIJm6L3pGCZfDURPRn-tFeplz8":"BHC 炸雞 數位媒體城店","ChIJY0jkXRmZfDURaiU2bs67XxA":"橋村炸雞 城山2洞店"};
+SHOP.splice(1,0,
+["逛街點（依每天行程）",[["弘大購物街","Day 1、住宿 1 附近","Hongdae Shopping Street","홍대 걷고싶은거리"],["明洞購物街","Day 2，美妝、服飾、街邊小吃","Myeongdong Shopping Street","명동거리"],["樂天免稅店 明洞本店","Day 2，記得帶護照和登機資料","Lotte Duty Free Myeongdong","롯데면세점 명동본점"],["新世界百貨 本店","Day 2，南大門、明洞附近","Shinsegae Department Store Main Store","신세계백화점 본점"],["南大門市場","Day 2","Namdaemun Market","남대문시장"],["聖水洞 연무장길（選物店、潮牌街）","Day 3","Seongsu Yeonmujang-gil","성수 연무장길"],["仁寺洞","Day 4，景福宮附近，伴手禮和傳統小物","Insadong","인사동"],["東大門設計廣場 DDP","Day 4","Dongdaemun Design Plaza","동대문디자인플라자"],["樂天世界購物中心","Day 5，樂天世界旁","Lotte World Mall","롯데월드몰"],["COEX Mall（星空圖書館所在）","Day 5","COEX Mall","코엑스몰"]]],
+["指定潮牌清單",[["Verish Anguk Flagship Store","베리시 安國旗艦店，Day 4 景福宮附近","Verish Anguk Flagship Store","베리시 안국 플래그십 스토어"],["Chaakan Shoes","Chaakan 鞋履品牌","Chaakan Shoes Seoul","Chaakan Shoes"],["apM Place Shopping Centre","apM Place 購物中心，東大門，Day 4","apM Place Dongdaemun","apM Place 동대문"],["Onitsuka Tiger","鬼塚虎，日本運動鞋品牌","Onitsuka Tiger Seoul","오니츠카타이거"],["JUUNEEDU PAJAMAS BOUTIQUE","JUUNEEDU 睡衣精品店","JUUNEEDU Pajamas Boutique Seoul","JUUNEEDU"],["National Geographic","國家地理，戶外服飾","National Geographic Apparel Seoul","내셔널지오그래픽"],["snow peak","雪峰，日本露營品牌","Snow Peak Seoul","스노우피크"],["MARITHÉ FRANÇOIS GIRBAUD","牛仔與街頭服飾品牌，常簡稱 Marithé","Marithe Francois Girbaud Seoul","마리떼프랑소와저버"],["Covernat","韓國街頭品牌，弘大有店","Covernat Hongdae","커버낫 홍대"],["Ader Error","韓國設計品牌，聖水洞有旗艦店","ADER ERROR Seongsu","아더에러 성수"],["SATUR","SATUR 韓國品牌","SATUR Seoul","SATUR"],["CUEREN","CUEREN 潮牌","CUEREN Seoul","CUEREN"]]],
+["香水專區",[["Tamburins","韓國香氛・護手霜品牌，聖水洞","Tamburins Seongsu","탬버린즈 성수"],["GRANHAND","韓國香水品牌（그랑핸드）","Granhand Seoul","그랑핸드"],["Le Labo","美國小眾香水，可現場調製","Le Labo Seoul","르라보"],["Diptyque","蒂普提克，法國香氛","Diptyque Seoul","딥티크"],["L’Artisan Parfumeur","阿蒂仙之香，法國香水","L'Artisan Parfumeur Seoul","L'Artisan Parfumeur"]]]);
+var DA=[['望遠','Mangwon','망원','住宿 1'],['弘大','Hongdae','홍대','Day 1 至 3'],['明洞','Myeongdong','명동','Day 2、4'],['梨大','Ewha','이대','Day 2'],['聖水洞','Seongsu','성수','Day 3'],['景福宮','Gyeongbokgung','경복궁','Day 4'],['東大門','Dongdaemun','동대문','Day 4'],['數位媒體城','Digital Media City','디지털미디어시티','住宿 2'],['蠶室','Jamsil','잠실','Day 5']];
+var DB=[['Mega Coffee','메가커피','Mega Coffee','韓國平價大杯咖啡'],['Paik’s Coffee','빽다방','Paik Coffee','韓國平價咖啡'],['Compose Coffee','컴포즈커피','Compose Coffee','韓國平價咖啡'],['Mammoth Coffee','매머드커피','Mammoth Coffee','韓國平價大杯咖啡'],['貢茶 Gong Cha','공차','Gong Cha','手搖飲'],['Palgong Tea','팔공티','Palgong Tea','韓國手搖飲']];
+var DC=[['香蕉牛奶','바나나맛우유','GS25 CU convenience store','편의점','韓國經典甜飲，便利商店就買得到'],['甜米釀','식혜','Sikhye Korean rice drink','식혜','傳統甜飲，便利商店有罐裝'],['柚子茶','유자차','Yuja tea cafe','유자차','熱飲，咖啡店很常見'],['雙和茶、紅棗茶','쌍화차・대추차','Korean traditional tea house','전통찻집','傳統茶屋，仁寺洞和景福宮一帶比較多'],['水正果','수정과','Sujeonggwa cinnamon punch','수정과','肉桂薑味的冷飲'],['Osulloc 綠茶','오설록','Osulloc Tea House','오설록','濟州綠茶品牌'],['馬格利','막걸리','Makgeolli bar','막걸리','傳統米酒，含酒精，年滿 19 歲才能喝']];
+var dcur=0;
+function renderDrink(){var a=DA[dcur];
+ $('#dpills').innerHTML=DA.map(function(x,i){return '<button data-i="'+i+'" class="'+(i===dcur?'on':'')+'"><b>'+x[0]+'</b>'+x[3]+'</button>'}).join('');
+ $('#dlist').innerHTML=DB.map(function(b){return '<li><span class="g">'+esc(b[0])+'<br><small style="color:var(--mute)">'+esc(b[3])+'　'+esc(b[1])+'</small></span>'+gb(b[2]+' '+a[1])+nb(b[1]+' '+a[2])+'</li>'}).join('')+'<li style="display:block"><b>韓國必喝・在地推薦</b></li>'+DC.map(function(c){return '<li><span class="g">'+esc(c[0])+'<br><small style="color:var(--mute)">'+esc(c[1])+'　'+esc(c[4])+'</small></span>'+gb(c[2]+' '+a[1])+nb(c[3]+' '+a[2])+'</li>'}).join('')}
+$('#dpills').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;dcur=+b.dataset.i;renderDrink()});
+renderChk();renderShop();renderDrink();
+
+// checklist
+var custom=lsGet("custom",[]),cdone=lsGet("cdone",{});
+function allChecks(){return CHECKS.concat(custom)}
+function renderChecks(){
+ $("#checks").innerHTML=allChecks().map(function(c,i){var cu=i>=CHECKS.length;return '<li class="'+(cdone[c]?"done":"")+'"><input type="checkbox" data-c="'+esc(c)+'" '+(cdone[c]?"checked":"")+' aria-label="完成"><span class="g">'+esc(c)+'</span>'+(cu?'<button class="x" data-i="'+(i-CHECKS.length)+'" aria-label="刪除">×</button>':'')+'</li>'}).join("");
+}
+$("#checks").addEventListener("change",function(e){var c=e.target;if(c.type!=="checkbox")return;cdone[c.dataset.c]=c.checked;lsSet("cdone",cdone);renderChecks()});
+$("#checks").addEventListener("click",function(e){var b=e.target.closest(".x");if(!b)return;custom.splice(+b.dataset.i,1);lsSet("custom",custom);renderChecks()});
+$("#cadd").addEventListener("click",function(){var v=$("#cn").value.trim();if(!v)return;custom.push(v);lsSet("custom",custom);$("#cn").value="";renderChecks()});
+renderChecks();
+</script>
+</body>
+</html>
